@@ -22,8 +22,8 @@ class PartItem : public QGraphicsRectItem
 {
 	Part* m_part;
 public:
-	PartItem(qreal x, qreal y, qreal w, qreal h, QGraphicsItem* parent = 0);
-	PartItem(QRectF r, QGraphicsItem* parent = 0);
+	PartItem(qreal x, qreal y, qreal w, qreal h, QGraphicsItem* parent = nullptr);
+	PartItem(QRectF r, QGraphicsItem* parent = nullptr);
 	void setPart(Part* p) {m_part = p;}
 	Part* part(){return  m_part;}
 };
@@ -39,9 +39,9 @@ signals:
 	void centerCanvas(int, int);
 	void updatePlayhead(int);
 public:
-	NavigatorScene(QObject* parent = 0);
-	NavigatorScene(const QRectF&, QObject* parent = 0);
-	NavigatorScene(qreal x, qreal y, qreal w, qreal h, QObject* parent = 0);
+	NavigatorScene(QObject* parent = nullptr);
+	NavigatorScene(const QRectF&, QObject* parent = nullptr);
+	NavigatorScene(qreal x, qreal y, qreal w, qreal h, QObject* parent = nullptr);
 };
 
 class CanvasNavigator : public QWidget
@@ -87,7 +87,7 @@ public slots:
 signals:
 	void updateScroll(int, int);
 public:
-	CanvasNavigator(QWidget* parent = 0);
+	CanvasNavigator(QWidget* parent = nullptr);
 	void setCanvas(ComposerCanvas* c);
 	static double calcSize(int);
 	static int sceneToTick(int);

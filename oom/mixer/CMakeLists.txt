@@ -21,7 +21,7 @@
 ##
 ## Expand Qt macros in source files
 ##
-QT4_WRAP_CPP ( mixer_mocs
+QT5_WRAP_CPP ( mixer_mocs
       AudioMixer.h
       astrip.h
       auxknob.h
@@ -37,19 +37,19 @@ QT4_WRAP_CPP ( mixer_mocs
 ##
 file (GLOB mixer_ui_files
       )
-QT4_WRAP_UI ( mixer_uis ${mixer_ui_files} )
+QT5_WRAP_UI ( mixer_uis ${mixer_ui_files} )
 
 ##
 ## List of source files to compile
 ##
 file (GLOB mixer_source_files
-      AudioMixer.cpp  
+      AudioMixer.cpp
       astrip.cpp
-      auxknob.cpp 
-      meter.cpp 
+      auxknob.cpp
+      meter.cpp
 	  #mstrip.cpp
-      panknob.cpp 
-	  #rack.cpp 
+      panknob.cpp
+	  #rack.cpp
       strip.cpp
       )
 
@@ -84,7 +84,13 @@ set_target_properties ( mixer
 ## Linkage
 ##
 target_link_libraries ( mixer
-      ${QT_LIBRARIES}
+      ${Qt5Core_LIBRARIES}
+      ${Qt5Widgets_LIBRARIES}
+      ${Qt5Network_LIBRARIES}
+      ${Qt5Concurrent_LIBRARIES}
+      ${Qt5Svg_LIBRARIES}
+      ${Qt5Xml_LIBRARIES}
+      ${QT_QTXML_LIBRARY}
       widgets
       )
 

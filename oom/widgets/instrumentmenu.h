@@ -31,7 +31,7 @@ private:
 
 public:
 	InstrumentMenu(QMenu* parent, MidiInstrument *instr);
-	virtual QWidget* createWidget(QWidget* parent = 0);
+	virtual QWidget* createWidget(QWidget* parent = nullptr);
 
 	int getProgram() { return m_program; }
 	void setProgram(int prog) { m_program = prog; };

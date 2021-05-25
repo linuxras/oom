@@ -10,7 +10,8 @@ extern Canvas canvas;
 extern options_t options;
 
 CanvasBezierLine::CanvasBezierLine(CanvasPort* item1_, CanvasPort* item2_, QGraphicsItem* parent) :
-    QGraphicsPathItem(parent, canvas.scene)
+    //QGraphicsPathItem(parent, canvas.scene)
+    QGraphicsPathItem(parent)
 {
     //if (options.fancy_eyecandy)
         //setOpacity(0);

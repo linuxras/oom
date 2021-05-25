@@ -7,6 +7,7 @@
 #ifndef _OOM_TRACK_MANAGER_
 #define _OOM_TRACKS_MANAGER_
 
+#include <QObject>
 #include <QMap>
 #include <QString>
 #include <QPair>

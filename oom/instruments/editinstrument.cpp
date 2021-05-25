@@ -39,7 +39,7 @@ enum
 //   EditInstrument
 //---------------------------------------------------------
 
-EditInstrument::EditInstrument(QWidget* parent, Qt::WFlags fl)
+EditInstrument::EditInstrument(QWidget* parent, Qt::WindowFlags fl)
 : QMainWindow(parent, fl)
 {
 	setupUi(this);
@@ -442,7 +442,7 @@ void EditInstrument::fileSave()/*{{{*/
 
 bool EditInstrument::fileSave(MidiInstrument* instrument, const QString& name)/*{{{*/
 {
-	FILE* f = fopen(name.toAscii().constData(), "w");
+	FILE* f = fopen(name.toLatin1().constData(), "w");
 	if (f == 0)
 	{
 		//if(debugMsg)

@@ -10,7 +10,8 @@ extern Canvas canvas;
 extern options_t options;
 
 CanvasLine::CanvasLine(CanvasPort* item1_, CanvasPort* item2_, QGraphicsItem* parent) :
-    QGraphicsLineItem(parent, canvas.scene)
+    //QGraphicsLineItem(parent, canvas.scene)
+    QGraphicsLineItem(parent)
 {
     //if (options.fancy_eyecandy)
         //setOpacity(0);

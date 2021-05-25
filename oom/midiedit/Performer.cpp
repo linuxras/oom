@@ -12,6 +12,11 @@
 
 #include <QApplication>
 #include <QtGui>
+#include <QMenu>
+#include <QMenuBar>
+#include <QDockWidget>
+#include <QSizeGrip>
+#include <QTabWidget>
 
 #include <stdio.h>
 
@@ -601,8 +606,9 @@ void Performer::showEvent(QShowEvent *)/*{{{*/
 	restoreDockWidget(m_prDock);
 	/*int w = tconfig().get_property("PerformerEdit", "widgetwidth", 924).toInt();
 	int h = tconfig().get_property("PerformerEdit", "widgetheigth", 650).toInt();
-	int dw = qApp->desktop()->width();
-	int dh = qApp->desktop()->height();
+    QRect size = qApp->primaryScreen()->geometry();
+	int dw = size.width();//qApp->desktop()->width();
+	int dh = size.height();//qApp->desktop()->height();
 	if(h <= dh && w <= dw)
 	{
 		//printf("Restoring window state\n");
@@ -2743,7 +2749,7 @@ void Performer::setKeyBindings(LSCPChannelInfo info)/*{{{*/
 	}
 	//const char* pname = info.midi_portname;
 
-	printf("info midi portname %s\n", info.midi_portname.toAscii().data());
+	printf("info midi portname %s\n", info.midi_portname.toLatin1().data());
     MidiPort* mp = &midiPorts[midiTrack->outPort()];
 	MidiDevice* dev = mp->device();
 	if (!dev)
@@ -2757,7 +2763,7 @@ void Performer::setKeyBindings(LSCPChannelInfo info)/*{{{*/
 	//for(iRoute ir = rl->begin(); ir != rl->end(); ++ir)
     for(ciRoute ir = rl->begin(); ir != rl->end(); ++ir)
 	{
-		printf("oom-port-name: %s, lscp-port-name: %s\n", (*ir).name().toAscii().data(), info.midi_portname.toAscii().data());
+		printf("oom-port-name: %s, lscp-port-name: %s\n", (*ir).name().toLatin1().data(), info.midi_portname.toLatin1().data());
 
 		QStringList tmp2 = (*ir).name().split(":", QString::SkipEmptyParts);
 		if(tmp2.size() > 1)
@@ -2842,7 +2848,7 @@ void Performer::execDeliveredScript(int id)
 {
 	//QString scriptfile = QString(INSTPREFIX) + SCRIPTSSUFFIX + deliveredScriptNames[id];
 	QString scriptfile = song->getScriptPath(id, true);
-	song->executeScript(scriptfile.toAscii().data(), parts(), quant(), true);
+	song->executeScript(scriptfile.toLatin1().data(), parts(), quant(), true);
 }
 
 //---------------------------------------------------------
@@ -2852,7 +2858,7 @@ void Performer::execDeliveredScript(int id)
 void Performer::execUserScript(int id)
 {
 	QString scriptfile = song->getScriptPath(id, false);
-	song->executeScript(scriptfile.toAscii().data(), parts(), quant(), true);
+	song->executeScript(scriptfile.toLatin1().data(), parts(), quant(), true);
 }
 
 

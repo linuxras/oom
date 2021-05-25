@@ -17,7 +17,7 @@ private slots:
 	void songChanged(int);
 public slots:
 public:
-	EditTools(QList<QAction*> actions, QWidget* parent = 0);
+	EditTools(QList<QAction*> actions, QWidget* parent = nullptr);
 	virtual ~EditTools(){}
 };
 

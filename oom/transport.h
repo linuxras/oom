@@ -53,7 +53,7 @@ signals:
     void sigChanged(const AL::TimeSignature&);
 
 public:
-    TempoSig(QWidget* parent = 0);
+    TempoSig(QWidget* parent = nullptr);
     void setTimesig(int a, int b);
 };
 
@@ -68,7 +68,7 @@ class Handle : public QWidget
     void mouseMoveEvent(QMouseEvent* ev);
     void mousePressEvent(QMouseEvent* ev);
 public:
-    Handle(QWidget* r, QWidget* parent = 0);
+    Handle(QWidget* r, QWidget* parent = nullptr);
 };
 
 class TimeLLabel;

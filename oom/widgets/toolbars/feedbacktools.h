@@ -25,7 +25,7 @@ private slots:
 	void songChanged(int);
 public slots:
 public:
-	FeedbackTools(QWidget* parent = 0);
+	FeedbackTools(QWidget* parent = nullptr);
 	virtual ~FeedbackTools(){}
 };
 

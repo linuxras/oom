@@ -33,7 +33,7 @@ class DoubleLabel;
 	qint64 m_index;
 
 public:
-	AuxCheckBox(QString label, qint64 index, QWidget *parent = 0)
+	AuxCheckBox(QString label, qint64 index, QWidget *parent = nullptr)
 	:QCheckBox(label, parent)
 	{
 		m_index = index;

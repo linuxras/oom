@@ -41,7 +41,7 @@ protected:
     QGridLayout* layout1;
 
 public:
-    EditEventDialog(QWidget* parent = 0);
+    EditEventDialog(QWidget* parent = nullptr);
     virtual Event event() = 0;
 };
 
@@ -55,9 +55,9 @@ class EditNoteDialog : public QDialog, public Ui::EditNoteDialogBase
 
 public:
     EditNoteDialog(int tick, const Event&,
-            QWidget* parent = 0);
+            QWidget* parent = nullptr);
     static Event getEvent(int tick, const Event&,
-            QWidget* parent = 0);
+            QWidget* parent = nullptr);
     virtual Event event();
 };
 
@@ -80,10 +80,10 @@ private slots:
 
 public:
     EditSysexDialog(int tick, const Event&,
-            QWidget* parent = 0);
+            QWidget* parent = nullptr);
     ~EditSysexDialog();
     static Event getEvent(int tick, const Event&,
-            QWidget* parent = 0);
+            QWidget* parent = nullptr);
     virtual Event event();
 };
 
@@ -117,9 +117,9 @@ protected:
 
 public:
     EditCtrlDialog(int tick, const Event&,
-            const MidiPart*, QWidget* parent = 0);
+            const MidiPart*, QWidget* parent = nullptr);
     static Event getEvent(int tick, const Event&, const MidiPart*,
-            QWidget* parent = 0);
+            QWidget* parent = nullptr);
     virtual Event event();
 };
 
@@ -150,10 +150,10 @@ private slots:
 
 public:
     EditMetaDialog(int tick, const Event&,
-            QWidget* parent = 0);
+            QWidget* parent = nullptr);
     ~EditMetaDialog();
     static Event getEvent(int tick, const Event&,
-            QWidget* parent = 0);
+            QWidget* parent = nullptr);
     virtual Event event();
 };
 
@@ -174,9 +174,9 @@ protected:
 
 public:
     EditCAfterDialog(int tick, const Event&,
-            QWidget* parent = 0);
+            QWidget* parent = nullptr);
     static Event getEvent(int tick, const Event&,
-            QWidget* parent = 0);
+            QWidget* parent = nullptr);
     virtual Event event();
 };
 
@@ -198,9 +198,9 @@ protected:
 
 public:
     EditPAfterDialog(int tick, const Event&,
-            QWidget* parent = 0);
+            QWidget* parent = nullptr);
     static Event getEvent(int tick, const Event&,
-            QWidget* parent = 0);
+            QWidget* parent = nullptr);
     virtual Event event();
 };
 

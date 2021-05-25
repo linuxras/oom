@@ -21,7 +21,7 @@
 ##
 ## Expand Qt macros in source files
 ##
-QT4_WRAP_CPP ( patchcanvas_mocs
+QT5_WRAP_CPP ( patchcanvas_mocs
     patchcanvas.h
     patchscene.h
     theme.h
@@ -40,7 +40,7 @@ QT4_WRAP_CPP ( patchcanvas_mocs
 ##
 ## Resource files
 ##
-#QT4_ADD_RESOURCES ( patchcanvas_qrc_files
+#QT5_ADD_RESOURCES ( patchcanvas_qrc_files
     #patchcanvas.qrc
     #)
 
@@ -81,5 +81,11 @@ add_library ( patchcanvas STATIC
 ## Linkage
 ##
 target_link_libraries ( patchcanvas
-      ${QT_LIBRARIES}
+      ${Qt5Core_LIBRARIES}
+      ${Qt5Widgets_LIBRARIES}
+      ${Qt5Network_LIBRARIES}
+      ${Qt5Concurrent_LIBRARIES}
+      ${Qt5Svg_LIBRARIES}
+      ${Qt5Xml_LIBRARIES}
+      ${QT_QTXML_LIBRARY}
       )

@@ -15,7 +15,7 @@ START_NAMESPACE_PATCHCANVAS
 class PatchScene : public QGraphicsScene
 {
 public:
-    PatchScene(QObject* parent = 0);
+    PatchScene(QObject* parent = nullptr);
     void rubberbandByTheme();
     void fixScaleFactor();
     void zoom_fit();

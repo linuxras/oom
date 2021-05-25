@@ -7,7 +7,8 @@ extern Canvas canvas;
 extern options_t options;
 
 CanvasBezierLineMov::CanvasBezierLineMov(PortMode port_mode_, PortType port_type_, QGraphicsItem* parent) :
-    QGraphicsPathItem(parent, canvas.scene)
+    //QGraphicsPathItem(parent, canvas.scene)
+    QGraphicsPathItem(parent)
 {
     port_mode = port_mode_;
     port_type = port_type_;

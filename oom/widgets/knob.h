@@ -71,7 +71,7 @@ private:
     }
 
 public:
-    Knob(QWidget* parent = 0, const char *name = 0);
+    Knob(QWidget* parent = nullptr, const char *name = 0);
 
     ~Knob()
     {

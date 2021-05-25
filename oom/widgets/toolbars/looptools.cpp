@@ -1,4 +1,8 @@
 #include <QtGui>
+#include <QHBoxLayout>
+#include <QToolButton>
+#include <QDockWidget>
+#include <QAction>
 #include "config.h"
 #include "gconfig.h"
 #include "globals.h"

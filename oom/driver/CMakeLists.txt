@@ -61,7 +61,13 @@ set_target_properties( driver
 target_link_libraries ( driver
       ${ALSA_LIBRARIES}
       ${JACK_LIBRARIES}
-      ${QT_LIBRARIES}
+      ${Qt5Core_LIBRARIES}
+      ${Qt5Widgets_LIBRARIES}
+      ${Qt5Network_LIBRARIES}
+      ${Qt5Concurrent_LIBRARIES}
+      ${Qt5Svg_LIBRARIES}
+      ${Qt5Xml_LIBRARIES}
+      ${QT_QTXML_LIBRARY}
       pthread
       mplugins
       )

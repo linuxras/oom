@@ -28,7 +28,7 @@ class QFileSystemWatcher;
 class ClipListModel : public QStandardItemModel
 {
 public:
-	ClipListModel(QObject* parent = 0);
+	ClipListModel(QObject* parent = nullptr);
 	virtual QStringList mimeTypes() const;
 	virtual QMimeData* mimeData(const QModelIndexList&) const;
 };
@@ -88,7 +88,7 @@ public slots:
 	}
 
 public:
-	AudioClipList(QWidget *parent = 0);
+	AudioClipList(QWidget *parent = nullptr);
 	~AudioClipList();
 	void setDir(const QString& path);
 	bool active()

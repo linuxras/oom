@@ -1,4 +1,7 @@
 #include <QtGui>
+#include <QHBoxLayout>
+#include <QToolButton>
+
 #include "config.h"
 #include "gconfig.h"
 #include "globals.h"

@@ -9,7 +9,7 @@
 
 #include <QtCore/QSettings>
 #include <QtCore/QTimer>
-#include <QtGui/QAction>
+#include <QAction>
 
 #ifndef PATCHCANVAS_ORGANISATION_NAME
 #define PATCHCANVAS_ORGANISATION_NAME "PatchCanvas"

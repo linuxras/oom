@@ -530,7 +530,7 @@ Lv2Plugin::~Lv2Plugin()
                 gtk_widget_destroy((GtkWidget*)ui.nativeWidget);
             break;
 #endif
-        case UI_QT4:
+        case UI_QT5:
         case UI_X11:
             if (ui.nativeWidget)
                 delete (Lv2QWidget*)ui.nativeWidget;
@@ -781,7 +781,7 @@ bool Lv2Plugin::init(QString filename, QString label)
                                 if (isLV2FeatureSupported(f_uri) == false)
                                 {
                                     QString msg = QString("Plugin requires a feature that is not supported:\n%1").arg(f_uri);
-                                    set_last_error(msg.toAscii().constData());
+                                    set_last_error(msg.toLatin1().constData());
                                     can_continue = false;
                                     break;
                                 }
@@ -873,7 +873,7 @@ bool Lv2Plugin::init(QString filename, QString label)
                             if (uiQt4)
                             {
                                 uiFinal = uiQt4;
-                                ui.type = UI_QT4;
+                                ui.type = UI_QT5;
                             }
                             else if (uiX11)
                             {
@@ -922,7 +922,7 @@ bool Lv2Plugin::init(QString filename, QString label)
                                         if (ui.descriptor)
                                         {
                                             // Create base widget for UI parent
-                                            if (ui.type == UI_QT4 || ui.type == UI_X11)
+                                            if (ui.type == UI_QT5 || ui.type == UI_X11)
                                                 ui.nativeWidget = new Lv2QWidget(this);
 
                                             QString title;
@@ -1513,7 +1513,7 @@ void Lv2Plugin::showNativeGui(bool yesno)
                     gtk_window_resize(GTK_WINDOW(hostWidget), ui.width, ui.height);
 #endif
             }
-            else if (ui.type == UI_QT4)
+            else if (ui.type == UI_QT5)
             {
                 QWidget* hostWidget   = (Lv2QWidget*)ui.nativeWidget;
                 QWidget* pluginWidget = (QWidget*)ui.widget;
@@ -1562,7 +1562,7 @@ void Lv2Plugin::showNativeGui(bool yesno)
             closeNativeGui();
         break;
 #endif
-    case UI_QT4:
+    case UI_QT5:
     case UI_X11:
         ((QWidget*)ui.nativeWidget)->setVisible(yesno);
         break;
@@ -1595,7 +1595,7 @@ bool Lv2Plugin::nativeGuiVisible()
         case UI_GTK2:
             return ui.visible;
 #endif
-        case UI_QT4:
+        case UI_QT5:
         case UI_X11:
             if (ui.nativeWidget)
                 return ((QWidget*)ui.nativeWidget)->isVisible();
@@ -1624,7 +1624,7 @@ void Lv2Plugin::updateNativeGui()
                     gtk_window_resize(GTK_WINDOW((GtkWidget*)ui.nativeWidget), ui.width, ui.height);
             }
             break;
-        case UI_QT4:
+        case UI_QT5:
         case UI_X11:
             if (ui.nativeWidget)
             {
@@ -2018,7 +2018,7 @@ bool Lv2Plugin::readConfiguration(Xml& xml, bool readPreset)
         case Xml::TagStart:
             if (readPreset == false && !m_lib)
             {
-                LilvNode* pluginURI = lilv_new_uri(lv2world->world, new_uri.toAscii().constData());
+                LilvNode* pluginURI = lilv_new_uri(lv2world->world, new_uri.toLatin1().constData());
                 lplug = lilv_plugins_get_by_uri(lv2world->plugins, pluginURI);
 				if(!lplug)
 				{

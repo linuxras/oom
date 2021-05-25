@@ -14,7 +14,7 @@ class RouteMapDialog : public QDialog, public Ui::RouteMapDialogBase
 	Q_OBJECT
 
 	public:
-	RouteMapDialog(bool ro = false, QWidget* parent = 0);
+	RouteMapDialog(bool ro = false, QWidget* parent = nullptr);
 	void setFileName(QString);
 	void setNotes(QString);
 

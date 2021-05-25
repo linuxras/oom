@@ -20,7 +20,7 @@ private slots:
 	void songChanged(int);
 public slots:
 public:
-	EpicToolbar(QList<QAction*> actions, QWidget* parent = 0);
+	EpicToolbar(QList<QAction*> actions, QWidget* parent = nullptr);
 	virtual ~EpicToolbar(){}
 	//void setSoloAction(QAction*);
 	//void setMuteAction(QAction*);

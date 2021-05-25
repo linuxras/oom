@@ -21,43 +21,43 @@
 ##
 ## Expand Qt macros in source files
 ##
-QT4_WRAP_CPP (widget_mocs
+QT5_WRAP_CPP (widget_mocs
 	  toolbars/transporttools.h
 	  toolbars/edittools.h
 	  toolbars/epictools.h
 	  toolbars/looptools.h
 	  toolbars/misctools.h
 	  toolbars/feedbacktools.h
-      toolbars/tools.h  
-      aboutbox_impl.h 
+      toolbars/tools.h
+      aboutbox_impl.h
       action.h
       apconfig.h
-      bigtime.h  
-      canvas.h  
-      checkbox.h  
-      comboQuant.h  
-      combobox.h  
-      confmport.h 
-      comment.h  
-      commentdock.h  
-      ctrlcombo.h  
-      dentry.h  
+      bigtime.h
+      canvas.h
+      checkbox.h
+      comboQuant.h
+      combobox.h
+      confmport.h
+      comment.h
+      commentdock.h
+      ctrlcombo.h
+      dentry.h
       didyouknow.h
-      doublelabel.h  
-      filedialog.h  
-      gatetime.h  
-      genset.h  
-      hitscale.h  
-      intlabel.h  
-      knob.h  
-      lcombo.h  
-      gcombo.h  
-      metronome.h  
-	  #midisyncimpl.h  
-      mixdowndialog.h  
-      mlabel.h  
-      mtscale.h  
-      pcscale.h  
+      doublelabel.h
+      filedialog.h
+      gatetime.h
+      genset.h
+      hitscale.h
+      intlabel.h
+      knob.h
+      lcombo.h
+      gcombo.h
+      metronome.h
+	  #midisyncimpl.h
+      mixdowndialog.h
+      mlabel.h
+      mtscale.h
+      pcscale.h
 	  tvieweditor.h
 	  tviewdock.h
 	  tracklistview.h
@@ -68,34 +68,34 @@ QT4_WRAP_CPP (widget_mocs
 	  conductor/pctablemodel.h
 	  conductor/pctable.h
 	  conductor/Conductor.h
-      nentry.h  
-      noteinfo.h  
-      pitchedit.h  
-      pitchlabel.h  
-      popupmenu.h  
-      # posedit.h  
-      poslabel.h  
+      nentry.h
+      noteinfo.h
+      pitchedit.h
+      pitchlabel.h
+      popupmenu.h
+      # posedit.h
+      poslabel.h
       projectcreateimpl.h
-      scrollscale.h  
-      shortcutcapturedialog.h  
-      shortcutconfig.h  
-      # sigedit.h  
-      siglabel.h  
-      sigscale.h  
-      slider.h  
-      sliderbase.h  
+      scrollscale.h
+      shortcutcapturedialog.h
+      shortcutconfig.h
+      # sigedit.h
+      siglabel.h
+      sigscale.h
+      slider.h
+      sliderbase.h
       songinfo.h
-      spinbox.h  
-      spinboxFP.h  
-      splitter.h  
-      swidget.h  
-      tb1.h  
-      tempolabel.h  
-      # ttoolbar.h  
-      ttoolbutton.h  
-      velocity.h  
-      view.h  
-      vscale.h  
+      spinbox.h
+      spinboxFP.h
+      splitter.h
+      swidget.h
+      tb1.h
+      tempolabel.h
+      # ttoolbar.h
+      ttoolbutton.h
+      velocity.h
+      view.h
+      vscale.h
 	  menulist.h
 	  tviewmenu.h
 	  tablespinner.h
@@ -131,32 +131,32 @@ QT4_WRAP_CPP (widget_mocs
 ## UI files
 ##
 file (GLOB widgets_ui_files
-      aboutbox.ui  
-	  #      appearancebase.ui 
+      aboutbox.ui
+	  #      appearancebase.ui
       apconfigbase.ui
-      cliplisteditorbase.ui  
-      commentbase.ui  
-      commentdockbase.ui  
+      cliplisteditorbase.ui
+      commentbase.ui
+      commentdockbase.ui
       configmidifilebase.ui
-      didyouknow.ui  
-      editnotedialogbase.ui  
-      editsysexdialogbase.ui  
-      fdialogbuttons.ui  
-      gatetimebase.ui  
-      gensetbase.ui  
-      itransformbase.ui  
-      metronomebase.ui  
-	  #midisync.ui  
-      mittransposebase.ui  
-      mixdowndialogbase.ui  
+      didyouknow.ui
+      editnotedialogbase.ui
+      editsysexdialogbase.ui
+      fdialogbuttons.ui
+      gatetimebase.ui
+      gensetbase.ui
+      itransformbase.ui
+      metronomebase.ui
+	  #midisync.ui
+      mittransposebase.ui
+      mixdowndialogbase.ui
 	  conductor/ConductorBase.ui
       projectcreate.ui
-      shortcutcapturedialogbase.ui  
-      shortcutconfigbase.ui  
-      songinfo.ui  
-      synthconfigbase.ui  
-      transformbase.ui  
-      transposebase.ui  
+      shortcutcapturedialogbase.ui
+      shortcutconfigbase.ui
+      songinfo.ui
+      synthconfigbase.ui
+      transformbase.ui
+      transposebase.ui
       velocitybase.ui
 	  trackvieweditorbase.ui
 	  tviewdockbase.ui
@@ -169,47 +169,47 @@ file (GLOB widgets_ui_files
 	  ClipList/AudioClipListBase.ui
 	  stretchdialog.ui
       )
-QT4_WRAP_UI (widget_ui_headers ${widgets_ui_files})
+QT5_WRAP_UI (widget_ui_headers ${widgets_ui_files})
 
 ##
 ## List of source files to compile
 ##
 file (GLOB widgets_source_files
-      toolbars/tools.cpp 
+      toolbars/tools.cpp
 	  toolbars/transporttools.cpp
 	  toolbars/edittools.cpp
 	  toolbars/epictools.cpp
 	  toolbars/looptools.cpp
 	  toolbars/misctools.cpp
 	  toolbars/feedbacktools.cpp
-      aboutbox_impl.cpp 
-      apconfig.cpp 
-      bigtime.cpp 
-      canvas.cpp 
-      checkbox.cpp 
+      aboutbox_impl.cpp
+      apconfig.cpp
+      bigtime.cpp
+      canvas.cpp
+      checkbox.cpp
       citem.cpp
-      comboQuant.cpp 
-      combobox.cpp  
+      comboQuant.cpp
+      combobox.cpp
       confmport.cpp
-      comment.cpp 
-      commentdock.cpp 
-      ctrlcombo.cpp 
-      dentry.cpp 
+      comment.cpp
+      commentdock.cpp
+      ctrlcombo.cpp
+      dentry.cpp
       dimap.cpp
-      doublelabel.cpp 
+      doublelabel.cpp
       drange.cpp
-      filedialog.cpp 
-      gatetime.cpp 
-      genset.cpp 
-      hitscale.cpp 
-      intlabel.cpp 
-      knob.cpp 
-      lcombo.cpp 
-      gcombo.cpp 
-      metronome.cpp 
-	  #midisyncimpl.cpp 
-      mixdowndialog.cpp 
-      mlabel.cpp 
+      filedialog.cpp
+      gatetime.cpp
+      genset.cpp
+      hitscale.cpp
+      intlabel.cpp
+      knob.cpp
+      lcombo.cpp
+      gcombo.cpp
+      metronome.cpp
+	  #midisyncimpl.cpp
+      mixdowndialog.cpp
+      mlabel.cpp
       mmath.cpp
 	  conductor/Conductor.cpp
 	  tvieweditor.cpp
@@ -219,39 +219,39 @@ file (GLOB widgets_source_files
 	  EffectRack.cpp
 	  rmap.cpp
 	  rmapdialog.cpp
-      mtscale.cpp 
-      pcscale.cpp 
+      mtscale.cpp
+      pcscale.cpp
 	  conductor/pctablemodel.cpp
 	  conductor/pctable.cpp
-      nentry.cpp 
-      noteinfo.cpp 
-      pitchedit.cpp 
-      pitchlabel.cpp 
-      popupmenu.cpp 
-      # posedit.cpp 
+      nentry.cpp
+      noteinfo.cpp
+      pitchedit.cpp
+      pitchlabel.cpp
+      popupmenu.cpp
+      # posedit.cpp
       poslabel.cpp
-      projectcreateimpl.cpp 
+      projectcreateimpl.cpp
       scldiv.cpp
       scldraw.cpp
       sclif.cpp
-      scrollscale.cpp  
-      shortcutcapturedialog.cpp 
-      shortcutconfig.cpp 
-      # sigedit.cpp 
-      siglabel.cpp 
-      sigscale.cpp 
-      slider.cpp 
-      sliderbase.cpp 
-      spinbox.cpp 
-      spinboxFP.cpp 
-      splitter.cpp  
-      swidget.cpp 
-      tb1.cpp   
-      tempolabel.cpp 
-      ttoolbar.cpp 
-      ttoolbutton.cpp 
-      velocity.cpp 
-      view.cpp    
+      scrollscale.cpp
+      shortcutcapturedialog.cpp
+      shortcutconfig.cpp
+      # sigedit.cpp
+      siglabel.cpp
+      sigscale.cpp
+      slider.cpp
+      sliderbase.cpp
+      spinbox.cpp
+      spinboxFP.cpp
+      splitter.cpp
+      swidget.cpp
+      tb1.cpp
+      tempolabel.cpp
+      ttoolbar.cpp
+      ttoolbutton.cpp
+      velocity.cpp
+      view.cpp
       vscale.cpp
 	  menulist.cpp
 	  tviewmenu.cpp
@@ -287,7 +287,7 @@ file (GLOB widgets_source_files
 ##
 ## Define target
 ##
-add_library ( widgets STATIC 
+add_library ( widgets STATIC
       ${widget_ui_headers}
       ${widget_mocs}
       ${widgets_source_files}
@@ -318,7 +318,13 @@ set_target_properties( widgets
 ## Linkage
 ##
 target_link_libraries ( widgets
-      ${QT_LIBRARIES}
+      ${Qt5Core_LIBRARIES}
+      ${Qt5Widgets_LIBRARIES}
+      ${Qt5Network_LIBRARIES}
+      ${Qt5Concurrent_LIBRARIES}
+      ${Qt5Svg_LIBRARIES}
+      ${Qt5Xml_LIBRARIES}
+      ${QT_QTXML_LIBRARY}
       icons
 	  core
       )

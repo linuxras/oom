@@ -64,8 +64,8 @@ class MixerDock : public QFrame
 	void layoutUi();
 	
 public:
-	MixerDock(QWidget *parent = 0);
-	MixerDock(MixerMode, QWidget *parent = 0 );
+	MixerDock(QWidget *parent = nullptr);
+	MixerDock(MixerMode, QWidget *parent = nullptr );
 	~MixerDock();
 	void setTracklist(TrackList* list);
 	TrackList* tracklist();

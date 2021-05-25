@@ -32,7 +32,7 @@ signals:
     void valueChanged(int);
 
 public:
-    ComboQuant(QWidget* parent = 0);
+    ComboQuant(QWidget* parent = nullptr);
     void setValue(int val);
 };
 

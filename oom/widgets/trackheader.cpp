@@ -5,6 +5,8 @@
 //===========================================================
 
 #include <QtGui>
+#include <QMessageBox>
+#include <QToolTip>
 #include <fastlog.h>
 #include <math.h>
 

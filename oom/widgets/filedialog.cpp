@@ -519,11 +519,11 @@ FILE* fileOpen(QWidget* parent, QString name, const QString& ext,
 		else
 			zip += QString(" > ");
 		zip += name;
-		fp = popen(zip.toAscii().data(), mode);
+		fp = popen(zip.toLatin1().data(), mode);
 	}
 	else
 	{
-		fp = fopen(name.toAscii().data(), mode);
+		fp = fopen(name.toLatin1().data(), mode);
 	}
 	if (fp == 0 && !noError)
 	{

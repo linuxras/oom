@@ -62,7 +62,7 @@ private slots:
     void noteReceived();
 
 public:
-    MITPluginTranspose(QWidget* parent = 0, Qt::WFlags fl = 0);
+    MITPluginTranspose(QWidget* parent = nullptr, Qt::WindowFlags fl = Qt::Widget);
     virtual void process(MEvent&);
     virtual void readStatus(Xml&);
     virtual void writeStatus(int, Xml&) const;

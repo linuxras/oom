@@ -10,7 +10,7 @@ class ProgramChangeTableModel : public QStandardItemModel
     virtual QStringList mimeTypes();
 
 public:
-    ProgramChangeTableModel(QObject *parent = 0);
+    ProgramChangeTableModel(QObject *parent = nullptr);
     void emit_layoutChanged();
 };
 #endif

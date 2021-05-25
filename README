@@ -48,6 +48,8 @@ http://www.famfamfam.com/lab/icons/silk/
  
 ====================================================================
 Let us know whether OOMidi works for you !!!
-Have a look at the webpage http://www.openoctave.org for details.
 
-
+I have ported this codebase to Qt5 and cleaned most of it for c++11 except warnings.
+LV2 plugins may still be broken but that's hard for me to fix because I don't have a computer
+capable of running OOMidi and supporting cast.
+(If anyone wants to donate a 64bit laptop with at least 4Gb RAM that will change linuxras@gmail.com)

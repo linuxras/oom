@@ -27,7 +27,7 @@ class InstrumentTree : public QTreeView
 	QItemSelectionModel *_patchSelModel;
 
 public:
-	InstrumentTree(QWidget* parent = 0, MidiInstrument* instr = 0, bool popup = false);
+	InstrumentTree(QWidget* parent = nullptr, MidiInstrument* instr = 0, bool popup = false);
 	void setInstrument(MidiInstrument* t) { 
 		m_instrument = t;
 		updateModel();

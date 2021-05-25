@@ -71,7 +71,7 @@ namespace Awl
         void setValue(const QString& s);
 
     public:
-        PosEdit(QWidget* parent = 0);
+        PosEdit(QWidget* parent = nullptr);
         ~PosEdit();
         QSize sizeHint() const;
 

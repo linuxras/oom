@@ -822,7 +822,7 @@ void AudioTrack::writeProperties(int level, Xml& xml) const
 				bool pre = iter.value().first;
 				double val = iter.value().second;
 				QString s("<auxSend trackId=\"%1\" pre=\"%2\">%3</auxSend>\n");
-				xml.nput(level, s.arg(iter.key()).arg(pre).arg(val).toAscii().constData());
+				xml.nput(level, s.arg(iter.key()).arg(pre).arg(val).toLatin1().constData());
 			}
 		}
 	}
@@ -839,14 +839,14 @@ void AudioTrack::writeProperties(int level, Xml& xml) const
 	{
 		const CtrlList* cl = icl->second;
 
-		QString s= QString("controller id=\"%1\" cur=\"%2\"").arg(cl->id()).arg(cl->curVal()).toAscii().constData();
+		QString s= QString("controller id=\"%1\" cur=\"%2\"").arg(cl->id()).arg(cl->curVal()).toLatin1().constData();
 		s += QString(" color=\"%1\" visible=\"%2\"").arg(cl->color().name()).arg(cl->isVisible());
-		xml.tag(level++, s.toAscii().constData());
+		xml.tag(level++, s.toLatin1().constData());
 		int i = 0;
 		for (ciCtrl ic = cl->begin(); ic != cl->end(); ++ic)
 		{
 			QString s("%1 %2, ");
-			xml.nput(level, s.arg(ic->second.getFrame()).arg(ic->second.val).toAscii().constData());
+			xml.nput(level, s.arg(ic->second.getFrame()).arg(ic->second.val).toLatin1().constData());
 			++i;
 			if (i >= 4)
 			{

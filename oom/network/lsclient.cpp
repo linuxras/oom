@@ -234,7 +234,7 @@ const LSCPChannelInfo LSClient::getKeyBindings(lscp_channel_info_t* chanInfo)/*{
 									portname = portname.remove("'");
 									info.midi_portname = portname;//.toUtf8().constData();
 																																													
-									printf("info midi port - %s\n", info.midi_portname.toAscii().constData());
+									printf("info midi port - %s\n", info.midi_portname.toLatin1().constData());
 									process = true;
 									break;
 								}
@@ -254,7 +254,7 @@ const LSCPChannelInfo LSClient::getKeyBindings(lscp_channel_info_t* chanInfo)/*{
 	if(process)/*{{{*/
 	{
 		printf("Starting key binding processing\n");
-		sprintf(query, "GET FILE INSTRUMENT INFO '%s' %d\r\n", info.instrument_filename.toAscii().constData(), nr);
+		sprintf(query, "GET FILE INSTRUMENT INFO '%s' %d\r\n", info.instrument_filename.toLatin1().constData(), nr);
 		if (lscp_client_query(_client, query) == LSCP_OK)
 		{
 			const char* ret = lscp_client_get_result(_client);
@@ -411,7 +411,7 @@ LSCPKeymap LSClient::_getKeyMapping(QString fname, int nr, int chan)/*{{{*/
 			int inner = 3;
 			for(int c = 0; c < inner; c++)
 			{
-				sprintf(query, "GET FILE INSTRUMENT INFO '%s' %d\r\n", fname.toAscii().constData(), nr);
+				sprintf(query, "GET FILE INSTRUMENT INFO '%s' %d\r\n", fname.toLatin1().constData(), nr);
 				if (lscp_client_query(_client, query) == LSCP_OK)
 				{
 					const char* ret = lscp_client_get_result(_client);

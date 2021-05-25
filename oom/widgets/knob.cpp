@@ -55,7 +55,7 @@ Knob::Knob(QWidget* parent, const char* name)
 	d_symbol = Line;
 	d_maxScaleTicks = 11;
 	d_knobWidth = 30;
-	_faceColSel = FALSE;
+	_faceColSel = false;
 	d_faceColor = palette().color(QPalette::Window);
 	d_curFaceColor = d_faceColor;
 	d_altFaceColor = d_faceColor;
@@ -498,7 +498,7 @@ void Knob::setFaceColor(const QColor c)
 {
 	d_faceColor = c;
 	if (!_faceColSel)
-		//update(FALSE);
+		//update(false);
 		repaint();
 }
 
@@ -510,7 +510,7 @@ void Knob::setAltFaceColor(const QColor c)
 {
 	d_altFaceColor = c;
 	if (_faceColSel)
-		//update(FALSE);
+		//update(false);
 		repaint();
 }
 
@@ -525,7 +525,7 @@ void Knob::selectFaceColor(bool alt)
 		d_curFaceColor = d_altFaceColor;
 	else
 		d_curFaceColor = d_faceColor;
-	//update(FALSE);
+	//update(false);
 	repaint();
 }
 
@@ -545,7 +545,7 @@ void Knob::setKnobImage(const QString img)
 void Knob::setMarkerColor(const QColor c)
 {
 	d_markerColor = c;
-	//update(FALSE);
+	//update(false);
 	repaint();
 }
 

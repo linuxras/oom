@@ -561,7 +561,7 @@ public:
     enum Lv2UiType {
         UI_NONE,
         UI_GTK2,
-        UI_QT4,
+        UI_QT5,
         UI_X11,
         UI_EXTERNAL
     };

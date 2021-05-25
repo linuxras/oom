@@ -24,7 +24,7 @@ class TrackViewMenu : public QWidgetAction
 
 	public:
 		TrackViewMenu(QMenu* parent, TrackView* t, bool viewall = false);
-		virtual QWidget* createWidget(QWidget* parent = 0);
+		virtual QWidget* createWidget(QWidget* parent = nullptr);
 
 	private slots:
 		void updateData(QListWidgetItem*);

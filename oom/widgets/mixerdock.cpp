@@ -12,6 +12,9 @@
 #include <QApplication>
 #include <QDockWidget>
 #include <QtGui>
+#include <QScrollArea>
+#include <QMenu>
+#include <QAction>
 
 #include "app.h"
 #include "icons.h"

@@ -21,13 +21,13 @@
 ##
 ## Expand Qt macros in source files
 ##
-QT4_WRAP_CPP ( instruments_mocs
+QT5_WRAP_CPP ( instruments_mocs
    editinstrument.h
    # minstrument.h
    )
 
 if(LSCP_SUPPORT)
-QT4_WRAP_CPP ( instruments_mocs
+QT5_WRAP_CPP ( instruments_mocs
 	importinstruments.h
 	${instruments_mocs}
       )
@@ -49,7 +49,7 @@ file (GLOB instruments_ui_files
 )
 endif(LSCP_SUPPORT)
 
-QT4_WRAP_UI ( instruments_uis ${instruments_ui_files} )
+QT5_WRAP_UI ( instruments_uis ${instruments_ui_files} )
 
 
 ##
@@ -100,7 +100,13 @@ set_target_properties( instruments
 ## Linkage
 ##
 target_link_libraries ( instruments
-      ${QT_LIBRARIES}
+      ${Qt5Core_LIBRARIES}
+      ${Qt5Widgets_LIBRARIES}
+      ${Qt5Network_LIBRARIES}
+      ${Qt5Concurrent_LIBRARIES}
+      ${Qt5Svg_LIBRARIES}
+      ${Qt5Xml_LIBRARIES}
+      ${QT_QTXML_LIBRARY}
       icons
       )
 

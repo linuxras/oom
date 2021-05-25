@@ -21,7 +21,7 @@
 ##
 ## Expand Qt macros in source files
 ##
-QT4_WRAP_CPP ( studio_mocs
+QT5_WRAP_CPP ( studio_mocs
 	OOProcess.h
 	OOStudio.h
 	OOClient.h
@@ -33,7 +33,7 @@ QT4_WRAP_CPP ( studio_mocs
 ##
 ## Resource files
 ##
-QT4_ADD_RESOURCES (studio_qrc_files 
+QT5_ADD_RESOURCES (studio_qrc_files
 		  studio.qrc
 		  )
 
@@ -61,7 +61,7 @@ file (GLOB studio_ui_files
 	OOStudioBase.ui
 	)
 
-QT4_WRAP_UI (studio_ui_headers ${studio_ui_files})
+QT5_WRAP_UI (studio_ui_headers ${studio_ui_files})
 
 
 ##
@@ -88,8 +88,13 @@ set (FILES_TO_TRANSLATE
 ## Linkage
 ##
 target_link_libraries ( oostudio
-      ${QT_LIBRARIES}
-	  ${QT_QTNETWORK_LIBRARY}
+      ${Qt5Core_LIBRARIES}
+      ${Qt5Widgets_LIBRARIES}
+      ${Qt5Network_LIBRARIES}
+      ${Qt5Concurrent_LIBRARIES}
+      ${Qt5Svg_LIBRARIES}
+      ${Qt5Xml_LIBRARIES}
+      ${QT_QTXML_LIBRARY}
 	  ${LSCP_LIBRARIES}
       ${JACK_LIBRARIES}
       )

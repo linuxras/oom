@@ -7,6 +7,9 @@
 
 #include "DoubleSlider.h"
 #include <QtGui>
+#include <QLabel>
+#include <QHBoxLayout>
+#include <QApplication>
 
 SliderSplitter::SliderSplitter(Qt::Orientation orient, QWidget* parent)
 : QSplitter(orient, parent)

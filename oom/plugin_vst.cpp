@@ -325,7 +325,7 @@ void VstPlugin::initPluginI(PluginI* plugi, const QString& filename, const QStri
 
 bool VstPlugin::init(QString filename, QString label)
 {
-    m_lib = lib_open(filename.toAscii().constData());
+    m_lib = lib_open(filename.toLatin1().constData());
 
     if (m_lib)
     {

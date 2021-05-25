@@ -34,7 +34,7 @@ class OODownload : public QObject
 	QUrl detectRedirect(const QUrl&, const QUrl&) const;
 
 public:
-	OODownload(QObject* parent = 0);
+	OODownload(QObject* parent = nullptr);
 	QString getFilename(const QString &url);
 	bool processDownload(DownloadPackage* pkg, QIODevice *data);
 	bool isRunning(int);

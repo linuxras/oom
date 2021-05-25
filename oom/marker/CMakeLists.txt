@@ -21,7 +21,7 @@
 ##
 ## Expand Qt macros in source files
 ##
-QT4_WRAP_CPP ( marker_mocs
+QT5_WRAP_CPP ( marker_mocs
       markerview.h
       )
 
@@ -63,7 +63,13 @@ set_target_properties( marker
 ## Linkage
 ##
 target_link_libraries ( marker
-      ${QT_LIBRARIES}
+      ${Qt5Core_LIBRARIES}
+      ${Qt5Widgets_LIBRARIES}
+      ${Qt5Network_LIBRARIES}
+      ${Qt5Concurrent_LIBRARIES}
+      ${Qt5Svg_LIBRARIES}
+      ${Qt5Xml_LIBRARIES}
+      ${QT_QTXML_LIBRARY}
       awl
       icons
       )

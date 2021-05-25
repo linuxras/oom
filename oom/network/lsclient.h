@@ -57,7 +57,7 @@ public:
 		GIG = 0, SFZ, SF2
 	};
 
-	LSClient(QString host = "localhost", int port = 8888, QObject *parent = 0);
+	LSClient(QString host = "localhost", int port = 8888, QObject *parent = nullptr);
 	~LSClient();
 	void stopClient();
 	bool startClient();

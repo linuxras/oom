@@ -1830,7 +1830,7 @@ void PerformerCanvas::bindQwertyKeyToMidiValue(const char* key, int note)
 
 int PerformerCanvas::stepInputQwerty(QKeyEvent *event)
 {
-	//const char* key = event->text().toAscii().data();
+	//const char* key = event->text().toLatin1().data();
 	int pitch = _qwertyToMidiMap.value(event->text(), -1);
 
 	if (pitch == -1)

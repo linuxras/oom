@@ -28,7 +28,7 @@ signals:
 	void bookmarkAdded();
 
 public:
-	BookmarkListModel(QObject* parent = 0);
+	BookmarkListModel(QObject* parent = nullptr);
 	virtual bool dropMimeData(const QMimeData *data, Qt::DropAction action, int row, int col, const QModelIndex &parent);
 };
 
@@ -42,7 +42,7 @@ protected:
 	void dropEvent(QDropEvent *event);
 
 public:
-	BookmarkList(QWidget* parent = 0);
+	BookmarkList(QWidget* parent = nullptr);
 };
 
 #endif

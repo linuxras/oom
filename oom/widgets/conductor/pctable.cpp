@@ -8,6 +8,7 @@
 #include <QPoint>
 #include <QBrush>
 #include <QPen>
+#include <QMimeData>
 
 ProgramChangeTable::ProgramChangeTable(QWidget *parent) : QTableView(parent)
 {
@@ -132,7 +133,7 @@ QList<int> ProgramChangeTable::getSelectedRows()
 void HTMLDelegate::paint(QPainter* painter, const QStyleOptionViewItem & option, const QModelIndex &index) const/*{{{*/
 {
 	//printf("HTMLDelegate::paint() called\n");
-	QStyleOptionViewItemV4 options = option;
+	QStyleOptionViewItem options = option;
 	initStyleOption(&options, index);
 
 	painter->save();
@@ -154,7 +155,7 @@ void HTMLDelegate::paint(QPainter* painter, const QStyleOptionViewItem & option,
 
 QSize HTMLDelegate::sizeHint(const QStyleOptionViewItem & option, const QModelIndex & index) const
 {
-	QStyleOptionViewItemV4 options = option;
+	QStyleOptionViewItem options = option;
 	initStyleOption(&options, index);
 
 	QTextDocument doc;

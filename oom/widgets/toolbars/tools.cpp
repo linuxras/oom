@@ -13,7 +13,7 @@
 #include <QBoxLayout>
 #include <QHBoxLayout>
 #include <QToolButton>
-#include <QIconSet>
+//#include <QIconSet>
 #include <QIcon>
 
 #include "icons.h"
@@ -130,7 +130,7 @@ EditToolBar::EditToolBar(QWidget* parent, int tools, bool addSpacer, const char*
 	if(addSpacer)
 		m_layout->addItem(new QSpacerItem(4, 2, QSizePolicy::Expanding, QSizePolicy::Minimum));
 
-	connect(action, SIGNAL(selected(QAction*)), this, SLOT(toolChanged(QAction*)));
+	connect(action, SIGNAL(triggered(QAction*)), this, SLOT(toolChanged(QAction*)));
 }
 
 //---------------------------------------------------------

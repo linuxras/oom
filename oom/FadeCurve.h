@@ -27,7 +27,7 @@ public:
 		Quad,
 		Cubic,
 	};
-	FadeCurve(CurveType t, CurveMode, WavePart *part, QObject* parent = 0);
+	FadeCurve(CurveType t, CurveMode, WavePart *part, QObject* parent = nullptr);
 	~FadeCurve();
 	CurveType type()
 	{

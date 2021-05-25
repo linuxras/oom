@@ -267,8 +267,8 @@ void EventCanvas::selectAtTick(unsigned int tick)/*{{{*/
 		while (i != list.end())
 		{
 			CItem* cur = i->second;
-			unsigned int curtk = abs(cur->x() + cur->part()->tick() - tick);
-			unsigned int neartk = abs(nearest->x() + nearest->part()->tick() - tick);
+			unsigned int curtk = abs(static_cast<int>(cur->x() + cur->part()->tick() - tick));
+			unsigned int neartk = abs(static_cast<int>(nearest->x() + nearest->part()->tick() - tick));
 
 			if (curtk < neartk)
 			{

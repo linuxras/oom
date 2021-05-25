@@ -1084,7 +1084,7 @@ void Track::writeRouting(int level, Xml& xml) const/*{{{*/
 				if (r->channel != -1)
 					s += QString(QT_TRANSLATE_NOOP("@default", " channel=\"%1\"")).arg(r->channel);
 
-				xml.tag(level++, s.toAscii().constData());
+				xml.tag(level++, s.toLatin1().constData());
 
 				s = QT_TRANSLATE_NOOP("@default", "source");
 				if (r->type != Route::TRACK_ROUTE)
@@ -1094,7 +1094,7 @@ void Track::writeRouting(int level, Xml& xml) const/*{{{*/
 					s += QString(QT_TRANSLATE_NOOP("@default", " trackId=\"%1\"")).arg(r->track->id());
 				}
 				s += QString(QT_TRANSLATE_NOOP("@default", " name=\"%1\"/")).arg(Xml::xmlString(r->name()));
-				xml.tag(level, s.toAscii().constData());
+				xml.tag(level, s.toLatin1().constData());
 
 				xml.tag(level, "dest name=\"%s\" trackId=\"%lld\"/", Xml::xmlString(name()).toLatin1().constData(), m_id);
 
@@ -1124,7 +1124,7 @@ void Track::writeRouting(int level, Xml& xml) const/*{{{*/
 			if (r->remoteChannel != -1)
 				s += QString(QT_TRANSLATE_NOOP("@default", " remch=\"%1\"")).arg(r->remoteChannel);
 
-			xml.tag(level++, s.toAscii().constData());
+			xml.tag(level++, s.toLatin1().constData());
 
 			xml.tag(level, "source name=\"%s\" trackId=\"%lld\"/", Xml::xmlString(name()).toLatin1().constData(), m_id);
 
@@ -1140,7 +1140,7 @@ void Track::writeRouting(int level, Xml& xml) const/*{{{*/
 			else
 				s += QString(QT_TRANSLATE_NOOP("@default", " name=\"%1\"/")).arg(Xml::xmlString(r->name()));
 
-			xml.tag(level, s.toAscii().constData());
+			xml.tag(level, s.toLatin1().constData());
 
             xml.etag(--level, "Route");
 		}

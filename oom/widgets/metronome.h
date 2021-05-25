@@ -32,6 +32,6 @@ private slots:
     void beepVolumeChanged(int);
 
 public:
-    MetronomeConfig(QDialog* parent = 0);
+    MetronomeConfig(QDialog* parent = nullptr);
 };
 #endif

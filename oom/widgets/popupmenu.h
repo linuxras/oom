@@ -29,7 +29,7 @@ protected:
     void mouseReleaseEvent(QMouseEvent *);
 
 public:
-    PopupMenu(QWidget* parent = 0);
+    PopupMenu(QWidget* parent = nullptr);
     ~PopupMenu();
     void clear();
     QAction* findActionFromData(QVariant);

@@ -57,7 +57,7 @@ class MidiAssignDialog : public QDialog, public Ui::MidiAssignBase
 	AudioPortConfig* audioPortConfig;
 
 public:
-	MidiAssignDialog(QWidget* parent = 0);
+	MidiAssignDialog(QWidget* parent = nullptr);
 	~MidiAssignDialog();
 	
 	MPConfig *getMidiPortConfig()

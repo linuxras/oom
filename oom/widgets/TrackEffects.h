@@ -15,7 +15,7 @@ class Slider;
 class Knob;
 class QToolButton;
 class PopupMenu;
-class QButton;
+class QPushButton;
 class QLabel;
 class TransparentToolButton;
 class AudioTrack;
@@ -33,7 +33,7 @@ class AuxPreCheckBox : public QCheckBox
 	qint64 m_index;
 
 public:
-	AuxPreCheckBox(QString label, qint64 index, QWidget *parent = 0)
+	AuxPreCheckBox(QString label, qint64 index, QWidget *parent = nullptr)
 	:QCheckBox(label, parent)
 	{
 		m_index = index;
@@ -120,7 +120,7 @@ private slots:
 	void setupAuxPanel();
 
 public:
-	TrackEffects(Track* track, QWidget* parent = 0);
+	TrackEffects(Track* track, QWidget* parent = nullptr);
 	void setTrack(Track* t);
 	Track* getTrack()
 	{

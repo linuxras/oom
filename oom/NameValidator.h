@@ -7,7 +7,7 @@ class NameValidator : public QValidator
 {
 	Q_OBJECT
 public:
-	NameValidator(QObject* parent = 0);
+	NameValidator(QObject* parent = nullptr);
 	virtual QValidator::State validate(QString& input, int& pos) const;
 	virtual void fixup(QString& input) const;
 };

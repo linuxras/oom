@@ -21,9 +21,9 @@
 ##
 ## Expand Qt macros in source files
 ##
-QT4_WRAP_CPP (ctrl_mocs
-      ctrlcanvas.h 
-      ctrledit.h 
+QT5_WRAP_CPP (ctrl_mocs
+      ctrlcanvas.h
+      ctrledit.h
       ctrlpanel.h
 	  ResizeHandle.h
       )
@@ -33,7 +33,7 @@ QT4_WRAP_CPP (ctrl_mocs
 ##
 file (GLOB ctrl_source_files
       ctrlcanvas.cpp
-      ctrledit.cpp 
+      ctrledit.cpp
       ctrlpanel.cpp
 	  ResizeHandle.cpp
       )
@@ -67,7 +67,13 @@ set_target_properties( ctrl
 ## Linkage
 ##
 target_link_libraries ( ctrl
-      ${QT_LIBRARIES}
+      ${Qt5Core_LIBRARIES}
+      ${Qt5Widgets_LIBRARIES}
+      ${Qt5Network_LIBRARIES}
+      ${Qt5Concurrent_LIBRARIES}
+      ${Qt5Svg_LIBRARIES}
+      ${Qt5Xml_LIBRARIES}
+      ${QT_QTXML_LIBRARY}
       widgets
       )
 

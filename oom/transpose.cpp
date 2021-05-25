@@ -2,6 +2,7 @@
 #include <stdio.h>
 
 #include <QDialog>
+#include <QButtonGroup>
 
 #include "transpose.h"
 #include "track.h"

@@ -33,7 +33,7 @@ class ClipListEditorBaseWidget : public QWidget, public Ui::ClipListEditorBase
     Q_OBJECT
 
 public:
-    ClipListEditorBaseWidget(QWidget *parent = 0) : QWidget(parent)
+    ClipListEditorBaseWidget(QWidget *parent = nullptr) : QWidget(parent)
     {
         setupUi(this);
     }

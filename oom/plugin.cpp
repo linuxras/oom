@@ -1095,13 +1095,13 @@ void Pipeline::updateGuis()
 static void loadPluginLib(QFileInfo* fi, const PluginType t)
 {
     if (debugMsg)
-        qWarning("looking up %s", fi->filePath().toAscii().constData());
+        qWarning("looking up %s", fi->filePath().toLatin1().constData());
 
-    void* handle = lib_open(fi->filePath().toAscii().constData());
+    void* handle = lib_open(fi->filePath().toLatin1().constData());
 	if (handle == 0)
 	{
 		fprintf(stderr, "dlopen(%s) failed: %s\n",
-				fi->filePath().toAscii().constData(), dlerror());
+				fi->filePath().toLatin1().constData(), dlerror());
 		return;
 	}
 
@@ -1117,7 +1117,7 @@ static void loadPluginLib(QFileInfo* fi, const PluginType t)
 						"Unable to find ladspa_descriptor() function in plugin "
 						"library file \"%s\": %s.\n"
 						"Are you sure this is a LADSPA plugin file?\n",
-						fi->filePath().toAscii().constData(),
+						fi->filePath().toLatin1().constData(),
 						txt);
 			}
             lib_close(handle);
@@ -1164,7 +1164,7 @@ static void loadPluginLib(QFileInfo* fi, const PluginType t)
                         "Unable to find vst entry function in plugin "
                         "library file \"%s\": %s.\n"
                         "Are you sure this is a VST plugin file?\n",
-                        fi->filePath().toAscii().constData(),
+                        fi->filePath().toLatin1().constData(),
                         txt);
             }
             lib_close(handle);

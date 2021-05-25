@@ -45,7 +45,7 @@ public slots:
 	}
 
 public:
-	ResizeHandle(QWidget* parent = 0);
+	ResizeHandle(QWidget* parent = nullptr);
 	void setStartHeight(int h){m_height = h;}
 	int startHeight() {return m_height;}
 };

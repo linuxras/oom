@@ -26,7 +26,7 @@
 #include "xml.h"
 #include "utils.h"
 
-#include "QMessageBox"
+#include <QMessageBox>
 
 VirtualTrack::VirtualTrack()
 {/*{{{*/

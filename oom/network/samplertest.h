@@ -14,7 +14,7 @@ class SamplerConnectionTest : public QWidget
 {
 	Q_OBJECT
 public:
-	SamplerConnectionTest(QString host = "localhost", int port = 8888, QWidget *parent = 0);
+	SamplerConnectionTest(QString host = "localhost", int port = 8888, QWidget *parent = nullptr);
 	bool isSamplerRunning()
 	{
 		return _connected;

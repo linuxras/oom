@@ -255,6 +255,6 @@ extern void initMidiPorts();
 class QMenu;
 class QWidget;
 //extern QPopupMenu* midiPortsPopup(QWidget*);
-extern QMenu* midiPortsPopup(QWidget* parent = 0, int checkPort = -1);
+extern QMenu* midiPortsPopup(QWidget* parent = nullptr, int checkPort = -1);
 #endif
 

@@ -29,7 +29,7 @@ class CCInfoDelegate : public QItemDelegate
 	Q_OBJECT
 
 public:
-	CCInfoDelegate(QObject *parent = 0);
+	CCInfoDelegate(QObject *parent = nullptr);
 
 	QWidget* createEditor(QWidget *parent, const QStyleOptionViewItem &opt, const QModelIndex &ind) const;
 

@@ -31,7 +31,7 @@ private slots:
     void songChanged(int);
 
 public:
-    CommentDock(QWidget* parent = 0, Track* t = 0);
+    CommentDock(QWidget* parent = nullptr, Track* t = 0);
     ~CommentDock();
 	void setTrack(Track* t) 
 	{ 

@@ -34,7 +34,7 @@ class SongInfoWidget : public QDialog, public Ui::SongInfo
     Q_OBJECT
 
 public:
-    SongInfoWidget(QDialog *parent = 0) : QDialog(parent)
+    SongInfoWidget(QDialog *parent = nullptr) : QDialog(parent)
     {
         setupUi(this);
     }

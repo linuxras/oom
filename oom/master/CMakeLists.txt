@@ -21,10 +21,10 @@
 ##
 ## Expand Qt macros in source files
 ##
-QT4_WRAP_CPP ( master_mocs
-      lmaster.h 
-      masteredit.h 
-      master.h 
+QT5_WRAP_CPP ( master_mocs
+      lmaster.h
+      masteredit.h
+      master.h
       tscale.h
       )
 
@@ -67,7 +67,13 @@ set_target_properties( master
 ## Linkage
 ##
 target_link_libraries ( master
-      ${QT_LIBRARIES}
+      ${Qt5Core_LIBRARIES}
+      ${Qt5Widgets_LIBRARIES}
+      ${Qt5Network_LIBRARIES}
+      ${Qt5Concurrent_LIBRARIES}
+      ${Qt5Svg_LIBRARIES}
+      ${Qt5Xml_LIBRARIES}
+      ${QT_QTXML_LIBRARY}
       al
       awl
       widgets

@@ -34,6 +34,7 @@
 #include <QMenu>
 #include <QAction>
 #include <QtGui>
+#include <QtConcurrent/QtConcurrent>
 
 
 ClipListModel::ClipListModel(QObject* parent)

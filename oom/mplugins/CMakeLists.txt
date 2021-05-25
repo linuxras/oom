@@ -22,14 +22,14 @@
 ## Expand Qt macros in source files
 ##
 if ( ENABLE_EXPERIMENTAL )
-      QT4_WRAP_UI ( mplugins_experimental_uis rhythmbase.ui)
+      QT5_WRAP_UI ( mplugins_experimental_uis rhythmbase.ui)
       set ( experimental_hdrs rhythm.h )
       set ( experimental_srcs
             rhythm.cpp
             ${mplugins_experimental_uis}
             )
 endif ( ENABLE_EXPERIMENTAL )
-QT4_WRAP_CPP ( mplugins_mocs
+QT5_WRAP_CPP ( mplugins_mocs
       midifilterimpl.h
       midiitransform.h
       mittranspose.h
@@ -44,17 +44,17 @@ file (GLOB mplugins_ui_files
       midifilter.ui
       mrconfigbase.ui
       )
-QT4_WRAP_UI ( mplugins_uis ${mplugins_ui_files} )
+QT5_WRAP_UI ( mplugins_uis ${mplugins_ui_files} )
 
 ##
 ## List of source files to compile
 ##
 file (GLOB mplugins_source_files
-      midifilterimpl.cpp 
-      midiitransform.cpp 
+      midifilterimpl.cpp
+      midiitransform.cpp
       mitplugin.cpp
-      mittranspose.cpp 
-      mrconfig.cpp 
+      mittranspose.cpp
+      mrconfig.cpp
       random.cpp
       )
 
@@ -81,7 +81,7 @@ set (FILES_TO_TRANSLATE
 ##
 ## Compilation flags and target name
 ##
-# - tell cmake to name target transform.so instead of 
+# - tell cmake to name target transform.so instead of
 #   libtransform.so
 # - use precompiled header files
 #
@@ -96,7 +96,13 @@ set_target_properties ( mplugins
 ##
 target_link_libraries( mplugins
       # midiplugin
-      ${QT_LIBRARIES}
+      ${Qt5Core_LIBRARIES}
+      ${Qt5Widgets_LIBRARIES}
+      ${Qt5Network_LIBRARIES}
+      ${Qt5Concurrent_LIBRARIES}
+      ${Qt5Svg_LIBRARIES}
+      ${Qt5Xml_LIBRARIES}
+      ${QT_QTXML_LIBRARY}
       widgets
       )
 

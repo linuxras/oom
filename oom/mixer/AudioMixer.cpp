@@ -10,6 +10,11 @@
 
 #include <QApplication>
 #include <QtGui>
+#include <QComboBox>
+#include <QSplitter>
+#include <QScrollArea>
+#include <QPushButton>
+#include <QDockWidget>
 
 #include "app.h"
 #include "icons.h"

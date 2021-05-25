@@ -7,7 +7,7 @@ class OOClient: public QObject
 	Q_OBJECT
 
 public:
-	OOClient(QString host, quint16 port, QObject* parent = 0);
+	OOClient(QString host, quint16 port, QObject* parent = nullptr);
 	~OOClient();
 	void callShutdown();
 	bool isConnected();

@@ -21,7 +21,7 @@
 ##
 ## Expand Qt macros in source files
 ##
-QT4_WRAP_CPP (cliplist_mocs
+QT5_WRAP_CPP (cliplist_mocs
       cliplist.h
       )
 
@@ -29,7 +29,7 @@ QT4_WRAP_CPP (cliplist_mocs
 ## List of source files to compile
 ##
 file (GLOB cliplist_source_files
-      cliplist.cpp 
+      cliplist.cpp
       )
 
 ##
@@ -61,7 +61,13 @@ set_target_properties( cliplist
 ## Linkage
 ##
 target_link_libraries ( cliplist
-      ${QT_LIBRARIES}
+      ${Qt5Core_LIBRARIES}
+      ${Qt5Widgets_LIBRARIES}
+      ${Qt5Network_LIBRARIES}
+      ${Qt5Concurrent_LIBRARIES}
+      ${Qt5Svg_LIBRARIES}
+      ${Qt5Xml_LIBRARIES}
+      ${QT_QTXML_LIBRARY}
       awl
       widgets
       )

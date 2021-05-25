@@ -76,7 +76,7 @@ private slots:
 	void trackListChanged(TrackList* list);
 
 public:
-    AudioMixer(const QString&, QWidget* parent = 0);
+    AudioMixer(const QString&, QWidget* parent = nullptr);
     ~AudioMixer();
 	TrackList* tracklist() { return m_tracklist; }
     void clear();

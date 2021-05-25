@@ -31,7 +31,7 @@ SndFile* getSndFile(const SndFile* sf, QWidget* parent)
 //---------------------------------------------------------
 
 MixdownFileDialog::MixdownFileDialog(const SndFile* _sf,
-		QWidget* parent, Qt::WFlags fl)
+		QWidget* parent, Qt::WindowFlags fl)
 : QDialog(parent, fl)
 {
 	setupUi(this);

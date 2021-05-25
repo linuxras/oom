@@ -34,7 +34,7 @@ class DidYouKnowWidget : public QDialog, public Ui::DidYouKnow
     Q_OBJECT
 
 public:
-    DidYouKnowWidget(QDialog *parent = 0) : QDialog(parent)
+    DidYouKnowWidget(QDialog *parent = nullptr) : QDialog(parent)
     {
         setupUi(this);
     }

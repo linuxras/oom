@@ -21,7 +21,7 @@ private slots:
     virtual void accept();
 
 public:
-    Transpose(QWidget* parent = 0);
+    Transpose(QWidget* parent = nullptr);
 };
 
 #endif

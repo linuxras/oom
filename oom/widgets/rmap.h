@@ -19,7 +19,7 @@ class RouteMapDock : public QFrame, public Ui::RouteMapBase
 	QStandardItemModel* _listModel;
 
 	public:
-	RouteMapDock(QWidget* parent = 0);
+	RouteMapDock(QWidget* parent = nullptr);
 
 	public slots:
 		void populateTable(int);

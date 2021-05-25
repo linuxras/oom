@@ -40,6 +40,6 @@ void OOMCommand::process_command(OOMCommand * cmd)
 {
 	Q_ASSERT(cmd);
 
-	qDebug("processing %s\n", cmd->text().toAscii().data());
+	qDebug("processing %s\n", cmd->text().toLatin1().data());
 	cmd->redo();
 }

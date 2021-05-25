@@ -21,7 +21,8 @@ extern options_t options;
 extern features_t features;
 
 CanvasBox::CanvasBox(int group_id_, QString group_name_, Icon icon, QGraphicsItem* parent) :
-    QGraphicsItem(parent, canvas.scene)
+    //QGraphicsItem(parent, canvas.scene)
+    QGraphicsItem(parent)
 {
     // Save Variables, useful for later
     group_id = group_id_;

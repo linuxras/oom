@@ -65,7 +65,7 @@ signals:
 
 public:
     AbstractMidiEditor(int, int, PartList*,
-            QWidget* parent = 0, const char* name = 0);
+            QWidget* parent = nullptr, const char* name = 0);
     ~AbstractMidiEditor();
 
 	bool hasPart(int sn);

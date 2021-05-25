@@ -508,7 +508,7 @@ bool PCScale::selectProgramChange(int x)/*{{{*/
 			int minDiff = INT_MAX;
 			foreach(Event event, events)
 			{
-				int diff = abs((event.tick() + part->tick()) - x);
+				int diff = abs(static_cast<int>((event.tick() + part->tick()) - x));
 				if (diff < minDiff) {
 					minDiff = diff;
 					nearest = event;
@@ -567,7 +567,7 @@ bool PCScale::selectProgramChange(int x)/*{{{*/
 		int minDiff = INT_MAX;
 		foreach(Event event, events)
 		{
-			int diff = abs((event.tick() + part->tick()) - x);
+			int diff = abs(static_cast<int>((event.tick() + part->tick()) - x));
 			if (diff < minDiff) {
 				minDiff = diff;
 				nearest = event;
@@ -793,7 +793,7 @@ void PCScale::pdraw(QPainter& p, const QRect& r)/*{{{*/
 
 		QRect tr(xp, 0, xe - xp, 13);
 
-		QRect wr = r.intersect(tr);
+		QRect wr = r.intersected(tr);
 		if (!wr.isEmpty())
 		{
 			//printf("PCScale::pdraw marker %s xp:%d y:%d h:%d r.x:%d r.w:%d\n", "Test Debug", xp, height(), y, r.x(), r.width());

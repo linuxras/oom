@@ -95,8 +95,8 @@ signals:
 	void trackAdded(qint64);
 
 public:
-	CreateTrackDialog(int type = 0, int pos = -1, QWidget* parent = 0);
-	CreateTrackDialog(VirtualTrack** vt, int type = 0, int pos = -1, QWidget* parent = 0);
+	CreateTrackDialog(int type = 0, int pos = -1, QWidget* parent = nullptr);
+	CreateTrackDialog(VirtualTrack** vt, int type = 0, int pos = -1, QWidget* parent = nullptr);
 	~CreateTrackDialog(){}
 	void lockType(bool);
 };

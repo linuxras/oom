@@ -12,6 +12,9 @@
 #include <QtGui>
 #include <QLineEdit>
 #include <QTextEdit>
+#include <QLabel>
+#include <QListView>
+#include <QModelIndex>
 
 #include "track.h"
 #include "gconfig.h"
@@ -66,7 +69,8 @@ QWidget* TrackInstrumentMenu::createWidget(QWidget* parent)/*{{{*/
 	layout->addWidget(list);
 	w->setLayout(layout);
 
-	int desktopHeight = qApp->desktop()->height();
+    QRect size = qApp->primaryScreen()->geometry();
+	int desktopHeight = size.height();//qApp->desktop()->height();
 	int lstr = 0;
 	QString longest;
 

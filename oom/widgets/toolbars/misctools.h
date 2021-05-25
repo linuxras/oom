@@ -18,7 +18,7 @@ private slots:
 	void songChanged(int);
 public slots:
 public:
-	MiscToolbar(QList<QAction*> actions, QWidget* parent = 0);
+	MiscToolbar(QList<QAction*> actions, QWidget* parent = nullptr);
 	virtual ~MiscToolbar(){}
 };
 

@@ -40,8 +40,8 @@ protected:
     //virtual QValidator::State validate(QString&, int&) const;
 
 public:
-    SpinBoxFP(QWidget* parent = 0);
-    SpinBoxFP(int minValue, int maxValue, int step = 1, QWidget* parent = 0);
+    SpinBoxFP(QWidget* parent = nullptr);
+    SpinBoxFP(int minValue, int maxValue, int step = 1, QWidget* parent = nullptr);
     //SpinBoxFP(double minValue, double maxValue, double step = 1.0, QWidget* parent=0);
 
     void setValue(int val);

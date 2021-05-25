@@ -48,7 +48,7 @@ private slots:
     void songChanged(int);
 
 public:
-    MidiControllerEditDialog(QWidget* parent = 0, const char* name = 0, bool modal = false, Qt::WFlags fl = 0);
+    MidiControllerEditDialog(QWidget* parent = nullptr, const char* name = 0, bool modal = false, Qt::WindowFlags fl = Qt::Dialog);
 };
 
 extern MidiControllerEditDialog* midiControllerEditDialog;

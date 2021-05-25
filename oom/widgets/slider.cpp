@@ -240,7 +240,7 @@ void Slider::drawSlider(QPainter *p, const QRect &r)
 	{
 		//      qDrawShadePanel(p, r.x(), r.y(),
 		//r.width(), r.height(),
-		//pal, TRUE, d_bwTrough,0);
+		//pal, true, d_bwTrough,0);
 		cr.setRect(r.x() + d_bwTrough,
 				r.y() + d_bwTrough,
 				r.width() - 2 * d_bwTrough,
@@ -283,7 +283,7 @@ void Slider::drawSlider(QPainter *p, const QRect &r)
 		//  Draw thumb
 		//
 		//qDrawShadePanel(p,ipos, cr.y(), d_thumbLength, cr.height(),
-		//    pal, FALSE, d_borderWidth, &brBack);
+		//    pal, false, d_borderWidth, &brBack);
 		QPixmap thumbp;
 		bool loaded = thumbp.load(":images/slider_thumb_new_h.png");
 		if (loaded)
@@ -296,7 +296,7 @@ void Slider::drawSlider(QPainter *p, const QRect &r)
 		/*if (lineDist > 1)
 			qDrawShadeLine(p, markerPos, cr.y() + lineDist, markerPos,
 				cr.y() + cr.height() - lineDist,
-				pal, TRUE, 1);
+				pal, true, 1);
 		else
 		{
 			p->setPen(pal.dark().color());
@@ -329,7 +329,7 @@ void Slider::drawSlider(QPainter *p, const QRect &r)
 
 		//This adds the thumb slider
 		//qDrawShadePanel(p,cr.x(),ipos , cr.width(), d_thumbLength,
-		//    pal,FALSE,d_borderWidth, &brBack);
+		//    pal,false,d_borderWidth, &brBack);
 		QPixmap thumbp;
 		bool loaded = thumbp.load(":images/slider_thumb_new.png");
 		int knobx = cr.x() + 2;
@@ -346,7 +346,7 @@ void Slider::drawSlider(QPainter *p, const QRect &r)
 		// if (lineDist > 1)
 		//    qDrawShadeLine(p, cr.x() + lineDist , markerPos,
 		//       cr.x() + cr.width() - lineDist, markerPos,
-		//       pal, TRUE, 1);
+		//       pal, true, 1);
 		// else
 		// {
 		//
@@ -765,7 +765,7 @@ void Slider::paintEvent(QPaintEvent* /*e*/)
 void Slider::resizeEvent(QResizeEvent *e)
 {
 
-	d_resized = TRUE;
+	d_resized = true;
 	QSize s = e->size();
 	int sliderWidth = d_thumbWidth + 2 * d_bwTrough;
 
@@ -924,7 +924,7 @@ QSize Slider::sizeHint() //const ddskrjo
 	{
 		if (p.begin(this))
 		{
-			msWidth = d_scale.maxWidth(&p, FALSE);
+			msWidth = d_scale.maxWidth(&p, false);
 			msHeight = d_scale.maxHeight(&p);
 		}
 		p.end();

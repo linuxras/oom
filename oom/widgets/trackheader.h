@@ -117,7 +117,7 @@ signals:
 	void trackHeightChanged();
 
 public:
-	TrackHeader(Track* track, QWidget* parent = 0);
+	TrackHeader(Track* track, QWidget* parent = nullptr);
 	virtual ~TrackHeader();
 	bool isSelected();
 	bool isEditing()

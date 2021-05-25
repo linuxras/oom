@@ -22,7 +22,7 @@ class FileDialogButtonsWidget : public QWidget, public Ui::FileDialogButtons
     Q_OBJECT
 
 public:
-    FileDialogButtonsWidget(QWidget *parent = 0)
+    FileDialogButtonsWidget(QWidget *parent = nullptr)
     : QWidget(parent)
     {
         setupUi(this);
@@ -57,7 +57,7 @@ public:
     static ViewType lastViewUsed;
     FileDialogButtonsWidget buttons;
     MFileDialog(const QString& dir, const QString& filter = QString::null,
-            QWidget* parent = 0, bool writeFlag = false);
+            QWidget* parent = nullptr, bool writeFlag = false);
 };
 
 /* ORCAN - Disable previeww for now. It is not available in qt4. We will

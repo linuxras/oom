@@ -88,7 +88,7 @@ public:
         ScrNone, ScrMouse, ScrTimer, ScrDirect, ScrPage
     };
 
-    SliderBase(QWidget *parent = 0, const char *name = 0);
+    SliderBase(QWidget *parent = nullptr, const char *name = 0);
     ~SliderBase();
 
     bool cursorHoming() const

@@ -12,6 +12,8 @@
 #include <QCursor>
 #include <QMouseEvent>
 #include <QtGui>
+#include <QMenu>
+#include <QAction>
 
 #include "globals.h"
 #include "ctrledit.h"

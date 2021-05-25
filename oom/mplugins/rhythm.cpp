@@ -18,7 +18,7 @@
 //   RhythmGen
 //---------------------------------------------------------
 
-RhythmGen::RhythmGen(QWidget* parent, Qt::WFlags fo)
+RhythmGen::RhythmGen(QWidget* parent, Qt::WindowFlags fo)
 : QMainWindow(parent, fo)
 {
 	setupUi(this);
@@ -220,7 +220,7 @@ static const char* const image1_data[] = {
  *  The dialog will by default be modeless, unless you set 'modal' to
  *  TRUE to construct a modal dialog.
  */
-RhythmGenerator::RhythmGenerator(QWidget* parent, const char* name, bool modal, Qt::WFlags fl)
+RhythmGenerator::RhythmGenerator(QWidget* parent, const char* name, bool modal, Qt::WindowFlags fl)
 : QDialog(parent, name, modal, fl)
 {
 	QPixmap image0((const char**) image0_data);

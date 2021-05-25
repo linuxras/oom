@@ -29,7 +29,7 @@ public slots:
 signals:
 	void recordTriggered(bool);
 public:
-	TransportToolbar(QWidget* parent = 0, bool showMuteSolo = false, bool showPanic = false);
+	TransportToolbar(QWidget* parent = nullptr, bool showMuteSolo = false, bool showPanic = false);
 	virtual ~TransportToolbar(){}
 	void setSoloAction(QAction*);
 	void setMuteAction(QAction*);

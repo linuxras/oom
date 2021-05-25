@@ -63,7 +63,7 @@ namespace Awl
         void setValue(const QString& s);
 
     public:
-        SigEdit(QWidget* parent = 0);
+        SigEdit(QWidget* parent = nullptr);
         ~SigEdit();
 
         AL::TimeSignature sig() const

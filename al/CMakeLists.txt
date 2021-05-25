@@ -53,7 +53,7 @@ set_target_properties( al
       )
 set_source_files_properties(
       al.cpp
-      dsp.cpp 
+      dsp.cpp
       dspXMM.cpp
       sig.cpp
       xml.cpp
@@ -68,12 +68,18 @@ set_source_files_properties(
 ## Linkage
 ##
 target_link_libraries ( al
-      ${QT_LIBRARIES}
+      ${Qt5Core_LIBRARIES}
+      ${Qt5Widgets_LIBRARIES}
+      ${Qt5Network_LIBRARIES}
+      ${Qt5Concurrent_LIBRARIES}
+      ${Qt5Svg_LIBRARIES}
+      ${Qt5Xml_LIBRARIES}
+      ${QT_QTXML_LIBRARY}
       )
 
 ##
 ## Install location
 ##
-#install(TARGETS al 
+#install(TARGETS al
 #     DESTINATION ${OOMidi_MODULES_DIR}
 #     )

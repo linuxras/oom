@@ -14,6 +14,10 @@
 
 #include <QtGui>
 #include <QMainWindow>
+#include <QTabWidget>
+#include <QDockWidget>
+#include <QScrollBar>
+#include <QStackedWidget>
 
 #include "Composer.h"
 #include "song.h"

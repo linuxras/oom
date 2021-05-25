@@ -51,7 +51,7 @@ class TrackViewDock : public QFrame, public Ui::TViewDockBase {
 		void toggleButtons(bool);
 	
 	public:
-		TrackViewDock(QWidget* parent = 0);
+		TrackViewDock(QWidget* parent = nullptr);
 		~TrackViewDock();
 	
 };

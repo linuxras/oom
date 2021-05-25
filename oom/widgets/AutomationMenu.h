@@ -33,7 +33,7 @@ class AutomationMenu : public QWidgetAction
 
 	public:
 		AutomationMenu(QMenu* parent, Track* t);
-		virtual QWidget* createWidget(QWidget* parent = 0);
+		virtual QWidget* createWidget(QWidget* parent = nullptr);
 
 	private slots:
 		void inputItemClicked(const QModelIndex&);

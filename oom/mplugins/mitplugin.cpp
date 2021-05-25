@@ -15,6 +15,7 @@
 #include "mittranspose.h"
 #include "midifilterimpl.h"
 #include "mrconfig.h"
+#include <QAction>
 
 #ifdef BUILD_EXPERIMENTAL
 #include "rhythm.h"

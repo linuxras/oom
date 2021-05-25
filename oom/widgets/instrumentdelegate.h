@@ -29,7 +29,7 @@ class InstrumentDelegate : public QItemDelegate
 	Q_OBJECT
 
 public:
-	InstrumentDelegate(QObject *parent = 0);
+	InstrumentDelegate(QObject *parent = nullptr);
 
 	QWidget* createEditor(QWidget *parent, const QStyleOptionViewItem &opt, const QModelIndex &ind) const;
 

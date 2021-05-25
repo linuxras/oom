@@ -41,7 +41,7 @@ ENDIF(NOT DEFINED SHARE_INSTALL_PREFIX)
 #set(CMAKE_BUILD_TYPE release)
 
 # If no CMAKE_BUILD_TYPE is given on the command line,
-#  cmake either uses the cached value, or 'empty' (plain un-opt build). 
+#  cmake either uses the cached value, or 'empty' (plain un-opt build).
 # And yet the only way a user can reset a cached CMAKE_BUILD_TYPE
 #  is with "-DCMAKE_BUILD_TYPE=". So we cannot interfere with this.
 # We should probably not attempt to do this at all.
@@ -106,12 +106,12 @@ SET(OOMidi_SHARE_DIR ${SHARE_INSTALL_PREFIX}/${OOMidi_INSTALL_NAME})
 SET(OOMidi_LIB_DIR ${CMAKE_INSTALL_LIBDIR}/${OOMidi_INSTALL_NAME})
 
 #option ( ENABLE_LASH        "enable LASH Audio Session Handler"                              OFF)
-#option ( ENABLE_OSC         "enable Open Sound Control (DSSI also recommended)"              OFF)   
+#option ( ENABLE_OSC         "enable Open Sound Control (DSSI also recommended)"              OFF)
 #option ( ENABLE_DSSI        "enable Disposable Soft Synth Interface (OSC also recommended)"  OFF)
 #option ( ENABLE_VST         "enable VST/win support"                                         OFF)
 #option ( ENABLE_FLUID       "enable fluidsynth softsynth plugins"							 OFF)
 #option ( ENABLE_EXPERIMENTAL "enable building experimental features"                         OFF)
-option ( UPDATE_TRANSLATIONS "Update source translation share/locale/*.ts files 
+option ( UPDATE_TRANSLATIONS "Update source translation share/locale/*.ts files
          (WARNING: This will modify the .ts files in the source tree!!)"                     OFF)
 option ( ENABLE_LSCP         "enable lscp client"                                            ON)
 option ( ENABLE_LV2          "enable LV2 plugin support"                                      ON)
@@ -144,24 +144,36 @@ else (APPLE)
 endif (APPLE)
 
 ##
-##  look for Qt4
+##  look for Qt5
 ##
 
-set(QT_MIN_VERSION "4.3.0")
+set(QT_MIN_VERSION "5.1.1")
 set(QT_USE_QTXML TRUE)
 set(QT_USE_QTDESIGNER TRUE)
 #set(QT_USE_QTNSPLUGIN TRUE)
 SET (QT_USE_QTWEBKIT TRUE)
 set(QT_USE_QTSVG TRUE)
 
-find_package(Qt4)
-
-if (NOT QT4_FOUND)
-      message(FATAL_ERROR "Fatal error: QT (version >= 4.3.0) required.\n"
-      "Cmake tries to detect QT4 by searching for 'qmake' in your PATH\n"
-      "If you have QT4 installed, make sure qmake is found in your PATH."
+#find_package(Qt5 COMPONENTS Core Widgets REQUIRED)
+find_package(Qt5Core)
+if( Qt5Core_DIR )
+     message(STATUS "Found Qt5! Be aware that Qt5-support is still experimental and not officially supported!")
+     ADD_DEFINITIONS(-fPIC)
+     find_package(Qt5Widgets REQUIRED)
+     find_package(Qt5Gui REQUIRED)
+     find_package(Qt5Network REQUIRED)
+     find_package(Qt5Xml REQUIRED)
+     find_package(Qt5LinguistTools REQUIRED)
+     find_package(Qt5Concurrent REQUIRED)
+     find_package(Qt5Svg REQUIRED)
+     set(CMAKE_AUTOMOC ON)
+endif()
+if (NOT Qt5Widgets_FOUND)
+      message(FATAL_ERROR "Fatal error: QT (version >= 5.1.0) required.\n"
+      "Cmake tries to detect QT5 by searching for 'qmake' in your PATH\n"
+      "If you have QT5 installed, make sure qmake is found in your PATH."
       )
-endif (NOT QT4_FOUND)
+endif (NOT Qt5Widgets_FOUND)
 
 # Needed for plugins factory:
 SET(QT_USE_QTUITOOLS TRUE)
@@ -169,7 +181,17 @@ SET(QT_USE_QTUITOOLS TRUE)
 # Needed for the server to work
 SET (QT_USE_QTNETWORK TRUE)
 
-include(${QT_USE_FILE})
+if( Qt5Core_DIR )
+    include_directories(
+        ${Qt5Core_INCLUDE_DIRS}
+        ${Qt5Widgets_INCLUDE_DIRS}
+        ${Qt5Network_INCLUDE_DIRS}
+        ${Qt5Xml_INCLUDE_DIRS}
+        ${Qt5Concurrent_INCLUDE_DIRS}
+        ${Qt5Svg_INCLUDE_DIRS}
+        ${CMAKE_CURRENT_BINARY_DIR}
+        ${CMAKE_CURRENT_SOURCE_DIR})
+endif()
 
 
 ##
@@ -203,7 +225,7 @@ PKG_CHECK_MODULES(SAMPLERATE REQUIRED samplerate>=0.1.0)
 include_directories(${SAMPLERATE_INCLUDE_DIRS})
 
 ##
-## find libuuid 
+## find libuuid
 ##
 
 PKG_CHECK_MODULES(UUID REQUIRED uuid>=0.0.1)
@@ -245,7 +267,7 @@ include_directories(${OOMIDI_PLUGIN_INCLUDES})
 CHECK_INCLUDE_FILES (wordexp.h HAVE_WORDEXP)
 
 ##
-## find LASH 
+## find LASH
 ##
 
 #if (ENABLE_LASH)
@@ -253,7 +275,7 @@ CHECK_INCLUDE_FILES (wordexp.h HAVE_WORDEXP)
 #      if (LASH_FOUND)
 #            include_directories(${LASH_INCLUDE_DIRS})
 #            set(HAVE_LASH ON)
-#      endif (LASH_FOUND)           
+#      endif (LASH_FOUND)
 #	  #else (ENABLE_LASH)
 #	  #      message("LASH disabled")
 #endif (ENABLE_LASH)
@@ -492,7 +514,7 @@ summary_show()
 if (NOT CMAKE_BUILD_TYPE)
     message(" Build type: CMAKE_BUILD_TYPE is empty. Plain un-optimized build.")
 else (NOT CMAKE_BUILD_TYPE)
-    message(" Build type: " ${CMAKE_BUILD_TYPE} )          
+    message(" Build type: " ${CMAKE_BUILD_TYPE} )
 endif (NOT CMAKE_BUILD_TYPE)
 message("")
 

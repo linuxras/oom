@@ -20,7 +20,8 @@ extern options_t options;
 extern features_t features;
 
 CanvasPort::CanvasPort(int port_id_, QString port_name_, PortMode port_mode_, PortType port_type_, QGraphicsItem* parent) :
-        QGraphicsItem(parent, canvas.scene)
+        //QGraphicsItem(parent, canvas.scene)
+        QGraphicsItem(parent)
 {  
     // Save Variables, useful for later
     port_id   = port_id_;

@@ -21,11 +21,11 @@
 ##
 ## Expand Qt macros in source files
 ##
-QT4_WRAP_CPP ( network_mocs
+QT5_WRAP_CPP ( network_mocs
       )
 
 if(LSCP_SUPPORT)
-QT4_WRAP_CPP ( network_mocs
+QT5_WRAP_CPP ( network_mocs
 	lsclient.h
 	LSThread.h
 	${network_mocs}
@@ -75,8 +75,13 @@ set_target_properties( network
 ## Linkage
 ##
 target_link_libraries ( network
-      ${QT_LIBRARIES}
-	  ${QT_QTNETWORK_LIBRARY}
+      ${Qt5Core_LIBRARIES}
+      ${Qt5Widgets_LIBRARIES}
+      ${Qt5Network_LIBRARIES}
+      ${Qt5Concurrent_LIBRARIES}
+      ${Qt5Svg_LIBRARIES}
+      ${Qt5Xml_LIBRARIES}
+      ${QT_QTXML_LIBRARY}
       awl
       icons
       )

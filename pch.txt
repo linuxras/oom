@@ -36,9 +36,12 @@ add_custom_command(
       OUTPUT ${PROJECT_BINARY_DIR}/all.h.pch
       COMMAND ${CMAKE_CXX_COMPILER}
          -g -Wextra -fno-exceptions -Wall
-         -I${QT_INCLUDE_DIR}
-         -I${QT_QTCORE_INCLUDE_DIR}
-         -I${QT_QTGUI_INCLUDE_DIR}
+         -I${Qt5Core_LIBRARIES}
+         -I${Qt5Widgets_LIBRARIES}
+         -I${Qt5Network_LIBRARIES}
+         -I${Qt5Xml_LIBRARIES}
+         -I${Qt5Concurrent_LIBRARIES}
+         -I${Qt5Svg_LIBRARIES}
          -o all.h.pch all.h
       DEPENDS ${PROJECT_BINARY_DIR}/all.h
       WORKING_DIRECTORY ${PROJECT_BINARY_DIR}
@@ -51,9 +54,12 @@ add_custom_command(
          -Dawlplugin_EXPORTS -DQT_CORE_LIB -DQT_GUI_LIB -DQT_XML_LIB
          -DQT_PLUGIN -DQT_SHARED -DQT_NO_DEBUG
          -g -Wextra -fno-exceptions -Wall
-         -I${QT_INCLUDE_DIR}
-         -I${QT_QTCORE_INCLUDE_DIR}
-         -I${QT_QTGUI_INCLUDE_DIR}
+         -I${Qt5Core_LIBRARIES}
+         -I${Qt5Widgets_LIBRARIES}
+         -I${Qt5Network_LIBRARIES}
+         -I${Qt5Xml_LIBRARIES}
+         -I${Qt5Concurrent_LIBRARIES}
+         -I${Qt5Svg_LIBRARIES}
          -o all-pic.h.pch all-pic.h
       DEPENDS ${PROJECT_BINARY_DIR}/all-pic.h
       WORKING_DIRECTORY ${PROJECT_BINARY_DIR}

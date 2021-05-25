@@ -17,6 +17,8 @@
 #include <QDomNodeList>
 #include <QDomNode>
 #include <QIcon>
+#include <QMessageBox>
+#include <QFileDialog>
 #include <jack/jack.h>
 
 

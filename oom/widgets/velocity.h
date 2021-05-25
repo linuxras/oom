@@ -29,7 +29,7 @@ protected slots:
     void accept();
 
 public:
-    Velocity(QDialog* parent = 0);
+    Velocity(QDialog* parent = nullptr);
     void setRange(int id);
 
     int range() const

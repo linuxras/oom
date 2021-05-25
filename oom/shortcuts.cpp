@@ -375,7 +375,7 @@ void readShortCuts(Xml& xml)
 			{
 				if (tag.length())
 				{
-					int index = getShrtByTag(tag.toAscii().constData());
+					int index = getShrtByTag(tag.toLatin1().constData());
 					if (index != -1)
 					{
 						//printf("Index: %d\n",index);

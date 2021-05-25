@@ -9,6 +9,8 @@
 #include <QtGui>
 #include <QStringList>
 #include <QList>
+#include <QMessageBox>
+
 #include "apconfig.h"
 #include "song.h"
 #include "globals.h"

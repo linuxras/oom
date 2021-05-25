@@ -381,7 +381,7 @@ public:
 	{
 	}
 	QStringList keys() const;
-	QWidget* create(const QString& key, QWidget* parent = 0,
+	QWidget* create(const QString& key, QWidget* parent = nullptr,
 			const char* name = 0);
 	QString group(const QString& key) const;
 	QIcon iconSet(const QString& key) const;

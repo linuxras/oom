@@ -28,7 +28,7 @@ private slots:
     void cancelClicked();
 
 public:
-    MidiFileConfig(QWidget* parent = 0);
+    MidiFileConfig(QWidget* parent = nullptr);
     void updateValues();
 };
 

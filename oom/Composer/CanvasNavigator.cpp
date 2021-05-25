@@ -1,4 +1,9 @@
 #include <QtGui>
+#include <QHBoxLayout>
+#include <QGraphicsView>
+#include <QGraphicsSceneMouseEvent>
+#include <QGraphicsSceneWheelEvent>
+
 #include "CanvasNavigator.h"
 #include "ComposerCanvas.h"
 #include "config.h"

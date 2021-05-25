@@ -8,7 +8,7 @@ class OOMCommandServer : public QTcpServer
 	Q_OBJECT
 
 	public:
-		OOMCommandServer(QObject *parent = 0);
+		OOMCommandServer(QObject *parent = nullptr);
 
 	protected:
 		void incomingConnection(int socket);

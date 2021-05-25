@@ -2,6 +2,7 @@
 #include <values.h>
 
 #include <QtGui>
+#include <QVBoxLayout>
 
 #include "globals.h"
 #include "TimeHeader.h"

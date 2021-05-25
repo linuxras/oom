@@ -51,7 +51,7 @@ class PluginDialog : public QDialog
 	int m_trackType;
 
 public:
-    PluginDialog(int type, QWidget* parent = 0);
+    PluginDialog(int type, QWidget* parent = nullptr);
     static PluginI* getPlugin(int type, QWidget* parent);
     PluginI* value();
     void accept();

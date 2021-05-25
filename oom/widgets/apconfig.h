@@ -44,7 +44,7 @@ signals:
     void closed();
 
 public:
-    AudioPortConfig(QWidget* parent = 0);
+    AudioPortConfig(QWidget* parent = nullptr);
 	~AudioPortConfig();
 	void setSourceSelection(QString);
 	void setDestSelection(QString);

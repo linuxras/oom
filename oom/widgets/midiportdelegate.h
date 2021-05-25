@@ -36,7 +36,7 @@ class MidiPortDelegate : public QItemDelegate
 	Q_OBJECT
 
 public:
-	MidiPortDelegate(QObject *parent = 0);
+	MidiPortDelegate(QObject *parent = nullptr);
 
 	QWidget* createEditor(QWidget *parent, const QStyleOptionViewItem &opt, const QModelIndex &ind) const;
 

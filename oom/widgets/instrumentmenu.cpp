@@ -13,6 +13,7 @@
 #include <QLineEdit>
 #include <QTextEdit>
 #include <QPushButton>
+#include <QLabel>
 
 #include "track.h"
 #include "instrumenttree.h"

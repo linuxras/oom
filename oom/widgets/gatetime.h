@@ -30,7 +30,7 @@ protected slots:
     void accept();
 
 public:
-    GateTime(QWidget* parent = 0);
+    GateTime(QWidget* parent = nullptr);
     void setRange(int id);
 
     int range() const

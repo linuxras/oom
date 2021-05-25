@@ -45,7 +45,7 @@ namespace Awl
         void setValue(const AL::Pos&, bool);
 
     public:
-        PosLabel(QWidget* parent = 0);
+        PosLabel(QWidget* parent = nullptr);
 
         AL::Pos value() const
         {

@@ -29,6 +29,8 @@
 #include <QVector>
 #include <QMap>
 #include <QtGui>
+#include <QtConcurrent/QtConcurrent>
+#include <QProgressDialog>
 //#include <boost/bind.hpp>
 
 using namespace QtConcurrent;
@@ -238,7 +240,7 @@ void LSCPImport::btnSaveClicked(bool)/*{{{*/
 		if(dpath.exists() && !finfo.exists())//Dont overwrite
 		{
 			mi->setFilePath(fpath->text());
-			FILE* f = fopen(fpath->text().toAscii().constData(), "w");
+			FILE* f = fopen(fpath->text().toLatin1().constData(), "w");
 			if (f == 0)
 			{
 				QString s("Creating file failed: ");

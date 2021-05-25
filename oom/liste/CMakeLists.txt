@@ -21,14 +21,14 @@
 ##
 ## Expand Qt macros in source files
 ##
-QT4_WRAP_CPP ( liste_mocs
+QT5_WRAP_CPP ( liste_mocs
       # listedit.h
       # ctrllistedit.h
       # tracklistedit.h
       # partlistedit.h
       # ieventdialog.h
-      editevent.h      
-      listedit.h 
+      editevent.h
+      listedit.h
       )
 
 ##
@@ -37,7 +37,7 @@ QT4_WRAP_CPP ( liste_mocs
 file (GLOB liste_ui_files
       editctrlbase.ui
       )
-QT4_WRAP_UI ( liste_uis ${liste_ui_files} )
+QT5_WRAP_UI ( liste_uis ${liste_ui_files} )
 
 ##
 ## List of source files to compile
@@ -83,7 +83,13 @@ set_target_properties( liste
 ## Linkage
 ##
 target_link_libraries ( liste
-      ${QT_LIBRARIES}
+      ${Qt5Core_LIBRARIES}
+      ${Qt5Widgets_LIBRARIES}
+      ${Qt5Network_LIBRARIES}
+      ${Qt5Concurrent_LIBRARIES}
+      ${Qt5Svg_LIBRARIES}
+      ${Qt5Xml_LIBRARIES}
+      ${QT_QTXML_LIBRARY}
       awl
       widgets
       )

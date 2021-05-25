@@ -19,6 +19,8 @@
 #include "ResizeHandle.h"
 
 #include <QtGui>
+#include <QVBoxLayout>
+#include <QHBoxLayout>
 
 //---------------------------------------------------------
 //   CtrlEdit

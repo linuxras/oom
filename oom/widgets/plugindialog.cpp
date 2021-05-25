@@ -8,6 +8,16 @@
 //=========================================================
 
 #include <QtGui>
+#include <QVBoxLayout>
+#include <QHBoxLayout>
+#include <QTreeWidget>
+#include <QTreeWidgetItem>
+#include <QComboBox>
+#include <QPushButton>
+#include <QRadioButton>
+#include <QLabel>
+#include <QButtonGroup>
+#include <QHeaderView>
 #include "config.h"
 #include "plugindialog.h"
 #include "track.h"
@@ -54,7 +64,7 @@ PluginDialog::PluginDialog(int type, QWidget* parent)
 
 	pList->header()->resizeSection(0, 80);
 	pList->header()->resizeSection(1, 120);
-	pList->header()->setResizeMode(2, QHeaderView::Stretch);
+	pList->header()->setStretchLastSection(true);//setResizeMode(2, QHeaderView::Stretch);
 	//int sizes[] = {110, 110, 0};//, 30, 30, 30, 30, 30, 40, 110, 110};
 	//for (int i = 0; i < 11; ++i)
 	//{

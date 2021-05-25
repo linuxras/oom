@@ -209,7 +209,7 @@ private slots:
     void setCtrl4(int);
 
 public:
-    MidiFilterConfig(QDialog* parent = 0);
+    MidiFilterConfig(QDialog* parent = nullptr);
 };
 
 #endif

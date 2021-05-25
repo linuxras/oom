@@ -150,7 +150,7 @@ static void readEventList(Xml& xml, EventList* el, const char* name)
 
 static void loadIDF(QFileInfo* fi)
 {
-	FILE* f = fopen(fi->filePath().toAscii().constData(), "r");
+	FILE* f = fopen(fi->filePath().toLatin1().constData(), "r");
 	if (f == 0)
 		return;
 	if (debugMsg)
@@ -1194,7 +1194,7 @@ bool MidiInstrument::fileSave()/*{{{*/
 	{
 		return false;
 	}
-	FILE* f = fopen(_filePath.toAscii().constData(), "w");
+	FILE* f = fopen(_filePath.toLatin1().constData(), "w");
 	if (f == 0)
 	{
 		return false;

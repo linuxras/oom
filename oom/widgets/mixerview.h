@@ -31,7 +31,7 @@ class MixerView : public TrackViewDock
 		void trackListChanged(TrackList*);
 
 	public:
-		MixerView(QWidget* parent = 0);
+		MixerView(QWidget* parent = nullptr);
 		~MixerView();
 		TrackList* tracklist() { return &m_tracklist; }
 		void addButton(QWidget *btn);

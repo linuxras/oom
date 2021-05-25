@@ -97,7 +97,7 @@ public slots:
     void songChanged(int);
 
 public:
-    MidiSyncConfig(QWidget* parent = 0);
+    MidiSyncConfig(QWidget* parent = nullptr);
     ~MidiSyncConfig();
     void setDirty();
 };

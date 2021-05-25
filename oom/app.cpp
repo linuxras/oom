@@ -1377,8 +1377,9 @@ OOMidi::OOMidi(int argc, char** argv) : QMainWindow()
 	}
 
 	QSize defaultScreenSize = tconfig().get_property("Interface", "size", QSize(0, 0)).toSize();
-	int dw = qApp->desktop()->width();
-	int dh = qApp->desktop()->height();
+    QRect size = qApp->primaryScreen()->geometry();
+	int dw = size.width();//qApp->desktop()->width();
+	int dh = size.height();//qApp->desktop()->height();
 	if(defaultScreenSize.height())
 	{
 		if(defaultScreenSize.height() <= dh && defaultScreenSize.width() <= dw)
@@ -2547,7 +2548,7 @@ void OOMidi::updateRouteMenus(Track* track, QObject* master)
 	// NOTE: The puropse of this routine is to make sure the items actually reflect
 	//  the routing status. And with OOMidi-1 QT3, it was also required to actually
 	//  check the items since QT3 didn't do it for us.
-	// But now with OOMidi-2 and QT4, QT4 checks an item when it is clicked.
+	// But now with OOMidi-2 and QT5, QT5 checks an item when it is clicked.
 	// So this routine is less important now, since 99% of the time, the items
 	//  will be in the right checked state.
 	// But we still need this in case for some reason a route could not be
@@ -4332,15 +4333,15 @@ OOMidi::lash_idle_cb()
 			{
 				/* save file */
 				QString ss = QString(lash_event_get_string(event)) + QString("/lash-project-oom.oom");
-				int ok = save(ss.toAscii(), false);
+				int ok = save(ss.toLatin1(), false);
 				if (ok)
 				{
-					project.setFile(ss.toAscii());
+					project.setFile(ss.toLatin1());
 					//setWindowTitle(tr("OOMidi: Song: ") + project.completeBaseName());
 					setWindowTitle(QString("The Composer - OOStudio-").append(VERSION).append(":     ") + project.completeBaseName()  + QString("     "));
-					addProject(ss.toAscii());
-					oomProject = QFileInfo(ss.toAscii()).absolutePath();
-					oomProjectFile = QFileInfo(ss.toAscii()).filePath();
+					addProject(ss.toLatin1());
+					oomProject = QFileInfo(ss.toLatin1()).absolutePath();
+					oomProjectFile = QFileInfo(ss.toLatin1()).filePath();
 				}
 				lash_send_event(lash_client, event);
 			}
@@ -4350,7 +4351,7 @@ OOMidi::lash_idle_cb()
 			{
 				/* load file */
 				QString sr = QString(lash_event_get_string(event)) + QString("/lash-project-oom.oom");
-				loadProjectFile(sr.toAscii(), false, true);
+				loadProjectFile(sr.toLatin1(), false, true);
 				lash_send_event(lash_client, event);
 			}
 				break;

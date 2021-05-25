@@ -5,6 +5,18 @@
 //===========================================================
 
 #include <QtGui>
+#include <QMessageBox>
+#include <QTableView>
+#include <QMenu>
+#include <QAction>
+#include <QCheckBox>
+#include <QScrollBar>
+#include <QHBoxLayout>
+#include <QVBoxLayout>
+#include <QToolButton>
+#include <QSpacerItem>
+#include <QHeaderView>
+
 #include "tracklistview.h"
 #include "globals.h"
 #include "gconfig.h"

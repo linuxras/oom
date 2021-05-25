@@ -20,8 +20,8 @@ class CCEdit : public QFrame, public Ui::CCEditBase
 	CCInfo* m_info;
 
 public:
-	CCEdit(QWidget* parent = 0, CCInfo* i = 0);
-	CCEdit(QWidget* parent = 0);
+	CCEdit(QWidget* parent = nullptr, CCInfo* i = 0);
+	CCEdit(QWidget* parent = nullptr);
 	virtual ~CCEdit();
 
 	CCInfo* info() { return m_info; }

@@ -22,7 +22,7 @@ private slots:
 	void setPunchoutSilent(bool);
 public slots:
 public:
-	LoopToolbar(Qt::Orientation orient = Qt::Horizontal, QWidget* parent = 0);
+	LoopToolbar(Qt::Orientation orient = Qt::Horizontal, QWidget* parent = nullptr);
 	virtual ~LoopToolbar(){}
 };
 

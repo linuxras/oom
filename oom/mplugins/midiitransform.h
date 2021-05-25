@@ -96,7 +96,7 @@ public slots:
     void songChanged(int);
 
 public:
-    MidiInputTransformDialog(QDialog* parent = 0, Qt::WFlags fl = 0);
+    MidiInputTransformDialog(QDialog* parent = nullptr, Qt::WindowFlags fl = Qt::Dialog);
 };
 
 extern void writeMidiInputTransforms(int level, Xml& xml);

@@ -34,7 +34,7 @@
 //   toolButton
 //---------------------------------------------------------
 
-static QToolButton* newButton(const QString& s, const QString& tt, bool toggle = false, int height = 25, QWidget* parent = 0)
+static QToolButton* newButton(const QString& s, const QString& tt, bool toggle = false, int height = 25, QWidget* parent = nullptr)
 {
 	QToolButton* button = new QToolButton(parent);
 	button->setFixedHeight(height);

@@ -1,4 +1,6 @@
 #include <QtGui>
+#include <QMessageBox>
+#include <QSystemTrayIcon>
 #include "OOStudio.h"
 
 int main(int argc, char* argv[])

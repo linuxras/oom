@@ -56,7 +56,7 @@ public:
     {
         VAL_TIME, VAL_LEN, VAL_VELON, VAL_VELOFF, VAL_PITCH
     };
-    NoteInfo(QWidget* parent = 0);
+    NoteInfo(QWidget* parent = nullptr);
     void setValues(unsigned, int, int, int, int);
     void setDeltaMode(bool);
 	void enableTools(bool);

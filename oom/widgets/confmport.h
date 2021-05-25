@@ -48,7 +48,7 @@ public slots:
     void songChanged(int);
 
 public:
-    MPConfig(QWidget* parent = 0);
+    MPConfig(QWidget* parent = nullptr);
     ~MPConfig();
 };
 

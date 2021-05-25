@@ -36,8 +36,8 @@ signals:
     void doubleClicked();
 
 public:
-    SpinBox(QWidget* parent = 0);
-    SpinBox(int minValue, int maxValue, int step = 1, QWidget* parent = 0);
+    SpinBox(QWidget* parent = nullptr);
+    SpinBox(int minValue, int maxValue, int step = 1, QWidget* parent = nullptr);
 };
 
 #endif

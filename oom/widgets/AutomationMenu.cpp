@@ -8,6 +8,10 @@
 #include "AutomationMenu.h"
 
 #include <QtGui>
+#include <QListView>
+#include <QVBoxLayout>
+#include <QLabel>
+#include <QScreen>
 
 #include "track.h"
 #include "globals.h"
@@ -40,7 +44,8 @@ QWidget* AutomationMenu::createWidget(QWidget* parent)
 		return 0;
 
 	int baseHeight = 109;
-	int desktopHeight = qApp->desktop()->height();
+    QRect size = qApp->primaryScreen()->geometry();
+	int desktopHeight = size.height();//qApp->desktop()->height();
 	int lstr = 0;
 	QString longest;
     

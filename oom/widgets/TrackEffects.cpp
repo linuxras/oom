@@ -5,6 +5,11 @@
 //===========================================================
 
 #include <QtGui>
+#include <QToolButton>
+#include <QPushButton>
+#include <QLabel>
+#include <QVBoxLayout>
+#include <QScrollArea>
 #include <fastlog.h>
 
 #include "globaldefs.h"

@@ -30,7 +30,7 @@ public slots:
     void setValue(int v);
 
 public:
-    IValue(QObject* parent = 0, const char* name = 0);
+    IValue(QObject* parent = nullptr, const char* name = 0);
 
     int value() const
     {
@@ -62,7 +62,7 @@ public slots:
     }
 
 public:
-    BValue(QObject* parent = 0, const char* name = 0);
+    BValue(QObject* parent = nullptr, const char* name = 0);
 
     bool value() const
     {

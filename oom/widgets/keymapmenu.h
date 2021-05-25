@@ -36,7 +36,7 @@ class KeyMapMenu : public QWidgetAction
 
 	public:
 		KeyMapMenu(QMenu* parent, MidiTrack *track, KeyMap* map, Patch* patch = 0);
-		virtual QWidget* createWidget(QWidget* parent = 0);
+		virtual QWidget* createWidget(QWidget* parent = nullptr);
 
 	private slots:
 		void doClose();

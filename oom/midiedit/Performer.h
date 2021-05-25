@@ -284,7 +284,7 @@ public slots:
 	void updateControllerSizes();
 
 public:
-    Performer(PartList*, QWidget* parent = 0, const char* name = 0, unsigned initPos = MAXINT);
+    Performer(PartList*, QWidget* parent = nullptr, const char* name = 0, unsigned initPos = MAXINT);
     ~Performer();
     //void setSolo(bool val);
 	bool isCurrentPatch(int, int, int);

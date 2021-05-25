@@ -8,6 +8,7 @@
 
 #include <QtGui>
 #include <QAbstractItemModel>
+#include <QComboBox>
 #include "midiportdelegate.h"
 #include "globals.h"
 #include "config.h"

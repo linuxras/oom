@@ -27,7 +27,7 @@ signals:
     void rowOrderChanged();
 
 public:
-    ProgramChangeTable(QWidget *parent = 0);
+    ProgramChangeTable(QWidget *parent = nullptr);
     void dropEvent(QDropEvent *evt);
     void mousePressEvent(QMouseEvent* evt);
 

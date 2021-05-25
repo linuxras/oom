@@ -48,7 +48,7 @@ public slots:
 	void populateInputs();
 
 public:
-    GlobalSettingsConfig(QWidget* parent = 0);
+    GlobalSettingsConfig(QWidget* parent = nullptr);
 };
 
 #endif

@@ -12,6 +12,7 @@
 #include <QCoreApplication>
 #include <QVBoxLayout>
 #include <QtGui>
+#include <QLabel>
 
 #include "track.h"
 #include "trackview.h"

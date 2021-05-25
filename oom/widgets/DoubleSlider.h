@@ -22,7 +22,7 @@ public slots:
 	void moveSlider(int pos, int index);
 
 public:
-	SliderSplitter(Qt::Orientation, QWidget* parent = 0);
+	SliderSplitter(Qt::Orientation, QWidget* parent = nullptr);
 };
 
 class SliderMiddle : public QFrame
@@ -42,7 +42,7 @@ signals:
 	void moveLeft(int);
 	void moveRight(int);
 public:
-	SliderMiddle(QWidget *parent = 0);
+	SliderMiddle(QWidget *parent = nullptr);
 };
 
 class DoubleSlider : public QFrame
@@ -65,7 +65,7 @@ private:
 	int 		m_handleWidth;
 	
 public:
-	DoubleSlider(bool showLabels, QWidget *parent = 0);
+	DoubleSlider(bool showLabels, QWidget *parent = nullptr);
 	~DoubleSlider();
 	
 	QSize sizeHint() const;

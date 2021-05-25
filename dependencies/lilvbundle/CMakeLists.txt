@@ -22,7 +22,7 @@ SET(LILV_VERSION "0.5.0")
 ##
 ## Expand Qt macros in source files
 ##
-QT4_WRAP_CPP (lilv_bundle_mocs
+QT5_WRAP_CPP (lilv_bundle_mocs
       )
 
 ##

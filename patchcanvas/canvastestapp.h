@@ -17,7 +17,7 @@ class CanvasTestApp : public QMainWindow
     Q_OBJECT
 
 public:
-    explicit CanvasTestApp(QWidget *parent = 0);
+    explicit CanvasTestApp(QWidget *parent = nullptr);
     ~CanvasTestApp();
 
 private:

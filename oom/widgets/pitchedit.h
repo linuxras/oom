@@ -25,7 +25,7 @@ protected:
     virtual int mapTextToValue(bool* ok);
 
 public:
-    PitchEdit(QWidget* parent = 0);
+    PitchEdit(QWidget* parent = nullptr);
     void setDeltaMode(bool);
 };
 

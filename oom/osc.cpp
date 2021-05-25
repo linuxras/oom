@@ -753,8 +753,8 @@ bool OscIF::oscInitGui(const QString& typ, const QString& baseName, const QStrin
 
 #ifdef OSC_DEBUG 
 			fprintf(stderr, "OscIF::oscInitGui  %s %s %s %s\n",
-					//fi.filePath().toAscii().data(),
-					//fi.fileName().toAscii().data(),
+					//fi.filePath().toLatin1().data(),
+					//fi.fileName().toLatin1().data(),
 					fi.filePath().toLatin1().constData(),
 					//fi.fileName().ascii(),
 
@@ -763,7 +763,7 @@ bool OscIF::oscInitGui(const QString& typ, const QString& baseName, const QStrin
 					//synth->info.filePath().ascii(),
 					filePath.toLatin1().constData(),
 
-					//name().toAscii().data(),
+					//name().toLatin1().data(),
 					//synth->name().ascii());
 					name.toLatin1().constData());
 #endif
@@ -820,15 +820,15 @@ bool OscIF::oscInitGui(const QString& typ, const QString& baseName, const QStrin
 
 						/*
 						execlp(
-								//fi.filePath().toAscii().data(),
-								//fi.fileName().toAscii().data(),
+								//fi.filePath().toLatin1().data(),
+								//fi.fileName().toLatin1().data(),
 								fi.filePath().ascii(),
 								fi.fileName().ascii(),
                                         
 								oscUrl,
                                         
-								//info.filePath().toAscii().data(),
-								//name().toAscii().data(),
+								//info.filePath().toLatin1().data(),
+								//name().toLatin1().data(),
 								synth->info.filePath().ascii(),
 								synth->name().ascii(),
                                         
@@ -836,14 +836,14 @@ bool OscIF::oscInitGui(const QString& typ, const QString& baseName, const QStrin
 						 */
 
 						fprintf(stderr, "exec %s %s %s %s failed: %s\n",
-								//fi.filePath().toAscii().data(),
-								//fi.fileName().toAscii().data(),
+								//fi.filePath().toLatin1().data(),
+								//fi.fileName().toLatin1().data(),
 								fi.filePath().toLatin1().constData(),
 								fi.fileName().toLatin1().constData(),
 
 								oscUrl.toLatin1().constData(),
 
-								//name().toAscii().data(),
+								//name().toLatin1().data(),
 								//synth->name().ascii(),
 								name.toLatin1().constData(),
 
@@ -866,7 +866,7 @@ bool OscIF::oscInitGui(const QString& typ, const QString& baseName, const QStrin
 	else
 	{
 		printf("OscIF::oscInitGui %s: no dir for gui found: %s\n",
-				//name().toAscii().data(), guiPath.toAscii().data());
+				//name().toLatin1().data(), guiPath.toLatin1().data());
 				//synth->name().ascii(), guiPath.ascii());
 				name.toLatin1().constData(), guiPath.toLatin1().constData());
 

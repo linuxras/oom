@@ -9,7 +9,8 @@ extern Canvas canvas;
 extern options_t options;
 
 CanvasLineMov::CanvasLineMov(PortMode port_mode_, PortType port_type_, QGraphicsItem* parent) :
-    QGraphicsLineItem(parent, canvas.scene)
+    //QGraphicsLineItem(parent, canvas.scene)
+    QGraphicsLineItem(parent)
 {
     port_mode = port_mode_;
     port_type = port_type_;

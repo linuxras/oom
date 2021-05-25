@@ -114,7 +114,7 @@ private slots:
 #endif
 
 public:
-    EditInstrument(QWidget* parent = 0, Qt::WFlags fl = Qt::Window);
+    EditInstrument(QWidget* parent = nullptr, Qt::WindowFlags fl = Qt::Window);
 };
 
 #endif

@@ -42,7 +42,7 @@ set (SubDirs
 
 if (ENABLE_PYTHON)
       set ( PYREM_CPP_FLAGS "-DENABLE_PYTHON" )
-      set ( PYLIBS ${PYTHON_LIB} remote) 
+      set ( PYLIBS ${PYTHON_LIB} remote)
       set ( SubDirs ${SubDirs} remote )
 endif (ENABLE_PYTHON)
 
@@ -51,7 +51,7 @@ subdirs (${SubDirs})
 ##
 ## Expand Qt macros in source files
 ##
-QT4_WRAP_CPP ( oom_moc_headers
+QT5_WRAP_CPP ( oom_moc_headers
       app.h
       cobject.h
       conf.h
@@ -79,7 +79,7 @@ QT4_WRAP_CPP ( oom_moc_headers
 ##
 ## Resource files
 ##
-QT4_ADD_RESOURCES (oom_qrc_files 
+QT5_ADD_RESOURCES (oom_qrc_files
 		  oom.qrc
 		  )
 
@@ -211,9 +211,9 @@ include_directories(
       ${CMAKE_CURRENT_BINARY_DIR}/liste
       ${CMAKE_CURRENT_BINARY_DIR}/midiedit
       ${CMAKE_CURRENT_BINARY_DIR}/mixer
-      ${CMAKE_CURRENT_BINARY_DIR}/mplugins 
+      ${CMAKE_CURRENT_BINARY_DIR}/mplugins
       ${CMAKE_CURRENT_BINARY_DIR}/remote
-      ${CMAKE_CURRENT_BINARY_DIR}/widgets 
+      ${CMAKE_CURRENT_BINARY_DIR}/widgets
       )
 
 ##
@@ -253,8 +253,13 @@ target_link_libraries(core
       mplugins
       synti
       widgets
-      ${QT_LIBRARIES}
-      ${QT_QTNETWORK_LIBRARY}
+      ${Qt5Core_LIBRARIES}
+      ${Qt5Widgets_LIBRARIES}
+      ${Qt5Network_LIBRARIES}
+      ${Qt5Concurrent_LIBRARIES}
+      ${Qt5Svg_LIBRARIES}
+      ${Qt5Xml_LIBRARIES}
+      ${QT_QTXML_LIBRARY}
       ${SNDFILE_LIBRARIES}
       ${SAMPLERATE_LIBRARIES}
       ${UUID_LIBRARIES}
@@ -298,7 +303,7 @@ target_link_libraries(icons
 ##
 ## Install location
 ##
-install( TARGETS oom 
+install( TARGETS oom
       RUNTIME DESTINATION ${CMAKE_INSTALL_PREFIX}/bin/
       )
   #install(TARGETS core icons

@@ -20,7 +20,7 @@ class StretchDialog : public QDialog
     Q_OBJECT
     
 public:
-    StretchDialog(QWidget* parent = 0);
+    StretchDialog(QWidget* parent = nullptr);
     ~StretchDialog();
     
     void setFile(QString filename, QString dirName);

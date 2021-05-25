@@ -30,7 +30,7 @@ class TrackInstrumentMenu : public QWidgetAction
 
 public:
 	TrackInstrumentMenu(QMenu* parent, Track*);
-	virtual QWidget* createWidget(QWidget* parent = 0);
+	virtual QWidget* createWidget(QWidget* parent = nullptr);
 
 private slots:
 	void itemClicked(const QModelIndex&);

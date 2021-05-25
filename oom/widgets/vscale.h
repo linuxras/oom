@@ -24,7 +24,7 @@ class VScale : public QWidget
 
 public:
 
-    VScale(QWidget* parent = 0) : QWidget(parent)
+    VScale(QWidget* parent = nullptr) : QWidget(parent)
     {
         setFixedWidth(18);
     }

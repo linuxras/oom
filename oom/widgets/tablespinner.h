@@ -23,7 +23,7 @@ class TableSpinnerDelegate : public QItemDelegate
 	int maxVal;
 
 public:
-	TableSpinnerDelegate(QObject *parent = 0, int min = -126, int max = 127);
+	TableSpinnerDelegate(QObject *parent = nullptr, int min = -126, int max = 127);
 
 	QWidget* createEditor(QWidget *parent, const QStyleOptionViewItem &opt, const QModelIndex &ind) const;
 

@@ -10,7 +10,7 @@ class OOProcess : public QProcess
 	QString name;
 	
 public:
-	OOProcess(QString name, QObject* parent = 0);
+	OOProcess(QString name, QObject* parent = nullptr);
 
 private slots:
 	void catchReadyOut();

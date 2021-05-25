@@ -782,7 +782,7 @@ Route name2route(const QString& rn, bool /*dst*/, int rtype)/*{{{*/
 	// Support old route style in oom files. Obsolete.
 	if (rn.size() >= 2 && rn[0].isNumber() && rn[1] == ':')
 	{
-		channel = rn[0].toAscii() - int('1');
+		channel = rn[0].toLatin1() - int('1');
 		s = rn.mid(2);
 	}
 

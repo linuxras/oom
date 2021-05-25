@@ -21,9 +21,9 @@
 #
 # Expand Qt macros
 #
-QT4_WRAP_CPP (composer_mocs
-      Composer.h 
-      ComposerCanvas.h 
+QT5_WRAP_CPP (composer_mocs
+      Composer.h
+      ComposerCanvas.h
 	  HeaderList.h
 	  CanvasNavigator.h
       )
@@ -69,7 +69,13 @@ set_target_properties( Composer
 # Linkage
 #
 target_link_libraries ( Composer
-      ${QT_LIBRARIES}
+      ${Qt5Core_LIBRARIES}
+      ${Qt5Widgets_LIBRARIES}
+      ${Qt5Network_LIBRARIES}
+      ${Qt5Concurrent_LIBRARIES}
+      ${Qt5Svg_LIBRARIES}
+      ${Qt5Xml_LIBRARIES}
+      ${QT_QTXML_LIBRARY}
       awl
       mixer
       widgets

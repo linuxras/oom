@@ -80,7 +80,7 @@ public slots:
 	void populateTable();
 
 public:
-	TrackListView(AbstractMidiEditor* e, QWidget* parent = 0);
+	TrackListView(AbstractMidiEditor* e, QWidget* parent = nullptr);
 	virtual ~TrackListView();
 	QTableView* getView(){return m_table;}
 };

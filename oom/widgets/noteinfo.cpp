@@ -8,6 +8,12 @@
 
 #include <QtGui>
 #include <QTableWidget>
+#include <QHeaderView>
+#include <QHBoxLayout>
+#include <QVBoxLayout>
+#include <QLabel>
+#include <QSpacerItem>
+#include <QCheckBox>
 
 #include "config.h"
 #include "noteinfo.h"

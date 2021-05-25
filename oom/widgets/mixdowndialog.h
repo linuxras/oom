@@ -30,8 +30,8 @@ private slots:
     virtual void accept();
 
 public:
-    MixdownFileDialog(const SndFile* f, QWidget* parent = 0,
-            Qt::WFlags fl = 0);
+    MixdownFileDialog(const SndFile* f, QWidget* parent = nullptr,
+            Qt::WindowFlags fl = Qt::Dialog);
 
     SndFile* sndFile()
     {

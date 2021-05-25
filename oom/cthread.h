@@ -11,7 +11,7 @@ class OOMClientThread : public QThread
 	Q_OBJECT
 
 	public:
-	OOMClientThread(int socket, QObject* parent = 0);
+	OOMClientThread(int socket, QObject* parent = nullptr);
 
 	void run();
 

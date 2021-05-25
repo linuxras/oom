@@ -10,7 +10,7 @@ class ProjectCreateImpl : public QDialog, Ui::ProjectCreate
 
     QString directoryPath;
 public:
-    explicit ProjectCreateImpl(QWidget *parent = 0);
+    explicit ProjectCreateImpl(QWidget *parent = nullptr);
     QString getProjectPath();
     QString getSongInfo();
 

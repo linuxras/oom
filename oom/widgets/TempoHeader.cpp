@@ -5,6 +5,7 @@
 //=========================================================
 
 #include <QtGui>
+#include <QVBoxLayout>
 
 #include "TempoHeader.h"
 #include "TempoCanvas.h"

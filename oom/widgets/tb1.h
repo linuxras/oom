@@ -52,7 +52,7 @@ signals:
     void toChanged(int);
 
 public:
-    //Toolbar1(QMainWindow* parent = 0, int r=96,
+    //Toolbar1(QMainWindow* parent = nullptr, int r=96,
     Toolbar1(QWidget* parent, int r = 96, int q = 96, bool showPitch = true);
     void setSolo(bool val);
     void setPitchMode(bool flag);

@@ -14,6 +14,7 @@
 #include <QMessageBox>
 #include <QStandardItem>
 #include <QStandardItemModel>
+#include <QButtonGroup>
 
 #include "genset.h"
 #include "app.h"
